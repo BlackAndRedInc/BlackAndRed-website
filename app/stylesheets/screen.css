@@ -85,13 +85,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   height: 45px;
 }
 
-/* line 3, ../sass/base.sass */
+@font-face {
+  font-family: "brandishregular";
+  src: url("/assets/fonts/font-webfont.eot");
+  src: url("/assets/fonts/font-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/font-webfont.woff") format("woff"), url("/assets/fonts/font-webfont.ttf") format("truetype"), url("/assets/fonts/font-webfont.svg#brandishregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 9, ../sass/base.sass */
 body {
   background-color: #ce0000;
   font-family: "Lato", sans-serif;
 }
 
-/* line 7, ../sass/base.sass */
+/* line 13, ../sass/base.sass */
 .wrapper {
   padding: 35px;
   position: relative;
@@ -118,7 +126,7 @@ body {
 
 /* line 16, ../sass/modules.sass */
 .logo {
-  font-family: Brandish;
+  font-family: brandishregular;
   font-size: 50px;
 }
 
