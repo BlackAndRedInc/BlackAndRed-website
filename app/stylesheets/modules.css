@@ -1,0 +1,41 @@
+/* line 1, ../sass/modules.sass */
+.tagline {
+  font-weight: bold;
+  font-size: 45px;
+  width: 500px;
+  text-transform: uppercase;
+  position: relative;
+}
+/* line 8, ../sass/modules.sass */
+.tagline .line-1 {
+  width: 200px;
+}
+/* line 11, ../sass/modules.sass */
+.tagline .images-gun {
+  position: absolute;
+  left: 440px;
+  top: 90px;
+}
+
+/* line 16, ../sass/modules.sass */
+.logo {
+  font-family: Brandish;
+  font-size: 50px;
+}
+
+/* line 20, ../sass/modules.sass */
+.draw-line {
+  fill: none;
+  stroke: black;
+  stroke-width: 7px;
+  stroke-miterlimit: 10px;
+}
+
+/* line 26, ../sass/modules.sass */
+.nav {
+  width: 1370px;
+  height: 1000px;
+  position: absolute;
+  top: 68px;
+  left: 485px;
+}

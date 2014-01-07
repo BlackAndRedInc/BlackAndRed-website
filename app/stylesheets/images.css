@@ -1,0 +1,6 @@
+/* line 1, ../sass/images.sass */
+.images-gun {
+  display: inline-block;
+  width: images-sprite-width(gun);
+  height: images-sprite-height(gun);
+}
