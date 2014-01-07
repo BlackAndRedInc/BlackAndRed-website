@@ -1,0 +1,8 @@
+web1:
+  document_root: app/
+  php_version: 5.3.8
+  php_extensions:
+  - mcrypt
+  - mysqli
+  - mbstring
+  - mysql
