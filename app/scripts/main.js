@@ -11,10 +11,11 @@ var animate = {
 		var strokeWidthNum = strokeWidth.substring(0, strokeWidth.length - 2);
 
 		var screenWidth = $('.wrapper').width();
+		var viewportWidth = screenWidth <= 700 ? 700 : screenWidth
 
 		var logoPos = {
-			x: screenWidth - logo.getBoundingClientRect().width,
-			y: 420
+			x: viewportWidth - logo.getBoundingClientRect().width,
+			y: 550
 		};
 
 		var letterPos = {
@@ -22,10 +23,10 @@ var animate = {
 			i: nav.querySelector('.letter-i').getBBox()
 		};
 
-		// var endLinePos = screenWidth;
+		// var endLinePos = viewportWidth;
 		var endLinePos = logoPos.x + letterPos.l.x + 7; // TODO: Don't know why I need to add 7 here
 		var startLine3Pos = {
-			x: logoPos.x + letterPos.i.x + 4.25,
+			x: logoPos.x + letterPos.i.x + 4.25, // TODO: Don't know why I need to add 4.5 here
 			y: logoPos.y + letterPos.i.y + letterPos.i.height -1
 		};
 		
@@ -33,16 +34,13 @@ var animate = {
 		line1.setAttribute('x2', endLinePos);
 		line2.setAttribute('x1', endLinePos - strokeWidthNum/2);
 		line2.setAttribute('x2', endLinePos - strokeWidthNum/2);
+		line2.setAttribute('y2', logoPos.y);
 
 		logo.setAttribute('transform', 'translate('+logoPos.x+','+logoPos.y+')');
 
 		line3.setAttribute('x1', startLine3Pos.x);
 		line3.setAttribute('x2', startLine3Pos.x);
 		line3.setAttribute('y1', startLine3Pos.y);
-
-		
-
-		console.log(letterPos.i.x, letterPos.i.y);
 
 		// $.each(line1Params, function(key, val){
 		// 	lineOne.setAttribute(key, val);
