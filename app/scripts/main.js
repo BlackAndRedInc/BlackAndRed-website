@@ -1,6 +1,6 @@
 var animate = {
 
-	start: function(){
+	getCordinates: function(){
 		var nav = document.querySelector('.nav.svg');
 		var line1 = nav.querySelector('.line-1');
 		var line2 = nav.querySelector('.line-2');
@@ -11,7 +11,7 @@ var animate = {
 		var strokeWidthNum = strokeWidth.substring(0, strokeWidth.length - 2);
 
 		var screenWidth = $('.wrapper').width();
-		var viewportWidth = screenWidth <= 700 ? 700 : screenWidth
+		var viewportWidth = screenWidth <= 700 ? 700 : screenWidth;
 
 		var logoPos = {
 			x: viewportWidth - logo.getBoundingClientRect().width,
@@ -29,23 +29,58 @@ var animate = {
 			x: logoPos.x + letterPos.i.x + 4.25, // TODO: Don't know why I need to add 4.5 here
 			y: logoPos.y + letterPos.i.y + letterPos.i.height -1
 		};
-		
 
-		line1.setAttribute('x2', endLinePos);
-		line2.setAttribute('x1', endLinePos - strokeWidthNum/2);
-		line2.setAttribute('x2', endLinePos - strokeWidthNum/2);
-		line2.setAttribute('y2', logoPos.y);
+		return {
+			logo: {
+				target: logo,
+				x: logoPos.x,
+				y: logoPos.y
+			},
+			lines: {
+				line1: {
+					target: line1,
+					params:{
+						x1: 540,
+						x2: endLinePos,
+						y1: 133,
+						y2: 133
+					}
+				},
+				line2: {
+					target: line2,
+					params:{
+						x1: endLinePos - strokeWidthNum/2,
+						x2: endLinePos - strokeWidthNum/2,
+						y1: 135,
+						y2: logoPos.y
+					}
+				},
+				line3: {
+					target: line3,
+					params:{
+						x1: startLine3Pos.x,
+						x2: startLine3Pos.x,
+						y1: startLine3Pos.y,
+						y2: 1000
+					}
+				}
+			}
+		};
+	},
 
-		logo.setAttribute('transform', 'translate('+logoPos.x+','+logoPos.y+')');
+	quickDraw: function(){
+		var cords = this.getCordinates();
 
-		line3.setAttribute('x1', startLine3Pos.x);
-		line3.setAttribute('x2', startLine3Pos.x);
-		line3.setAttribute('y1', startLine3Pos.y);
+		$.each(cords.lines, function(index, lineParams){
+			$.each(lineParams.params, function(param, value){
+				lineParams.target.setAttribute(param, value);
+			});
+		});
 
-		// $.each(line1Params, function(key, val){
-		// 	lineOne.setAttribute(key, val);
-		// });
+		cords.logo.target.setAttribute('transform', 'translate(' + cords.logo.x + ',' + cords.logo.y + ')');
+	},
 
+	start: function(){
 		// var initial_ts = new Date().getTime();
 		// var duration = 2000; // this animation should last for 2 seconds
 		// var path = fetchPreparedSVGPath();
@@ -69,4 +104,4 @@ var animate = {
 
 }
 
-animate.start();
+animate.quickDraw();
