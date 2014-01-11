@@ -1,7 +1,7 @@
 var _requestAnimationFrame = function(win, t) {
 	return win["webkitR" + t] || win["r" + t] || win["mozR" + t]
 	|| win["msR" + t] || function(fn) { setTimeout(fn, 60) };
-}(window, "equestAnimationFrame");
+}(window, "requestAnimationFrame");
 
 var animate = {
 
