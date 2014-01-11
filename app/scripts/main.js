@@ -24,12 +24,12 @@ var animate = {
 		};
 
 		var letterPos = {
-			l: nav.querySelector('.letter-l').getBBox(),
-			i: nav.querySelector('.letter-i').getBBox()
+			l: nav.querySelector('#l').getBBox(),
+			i: nav.querySelector('#i').getBBox()
 		};
 
 		// var endLinePos = viewportWidth;
-		var endLinePos = logoPos.x + letterPos.l.x + 7; // TODO: Don't know why I need to add 7 here
+		var endLinePos = logoPos.x + letterPos.l.x +3.5; // TODO: Don't know why I need to add 7 here
 		var startLine3Pos = {
 			x: logoPos.x + letterPos.i.x + 4.25, // TODO: Don't know why I need to add 4.5 here
 			y: logoPos.y + letterPos.i.y + letterPos.i.height -1
@@ -85,33 +85,6 @@ var animate = {
 		cords.logo.target.setAttribute('transform', 'translate(' + cords.logo.x + ',' + cords.logo.y + ')');
 	},
 
-	// animate: function(){
-	// 	var that = this;
-	// 	var cords = this.getCordinates();
-	// 	var line1 = cords.lines.line1;
-	// 	var line2 = cords.lines.line2;
-
-	// 	this.drawLineHoriz(
-	// 		line1.target,
-	// 		line1.params.x1,
-	// 		line1.params.y1,
-	// 		line1.params.x2,
-	// 		line1.params.y2,
-	// 		function(){
-	// 			that.drawLineVert(
-	// 				line2.target,
-	// 				line2.params.x1,
-	// 				line2.params.y1,
-	// 				line2.params.x2,
-	// 				line2.params.y2,
-	// 				function(){
-	// 					cords.logo.target.setAttribute('transform', 'translate(' + cords.logo.x + ',' + cords.logo.y + ')');
-	// 				}
-	// 			);
-	// 		}
-	// 	);
-	// },
-
 	animate: function(list) {
 		var item,
 			duration,
@@ -144,6 +117,8 @@ var animate = {
 	}
 
 };
+
+// animate.quickDraw()
 
 var cords = animate.getCordinates();
 var line1 = cords.lines.line1;
