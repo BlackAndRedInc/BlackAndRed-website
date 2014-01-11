@@ -1,3 +1,8 @@
+var _requestAnimationFrame = function(win, t) {
+	return win["webkitR" + t] || win["r" + t] || win["mozR" + t]
+	|| win["msR" + t] || function(fn) { setTimeout(fn, 60) };
+}(window, "equestAnimationFrame");
+
 var animate = {
 
 	getCordinates: function(){
@@ -40,7 +45,7 @@ var animate = {
 				line1: {
 					target: line1,
 					params:{
-						x1: 540,
+						x1: 525,
 						x2: endLinePos,
 						y1: 133,
 						y2: 133
@@ -80,85 +85,104 @@ var animate = {
 		cords.logo.target.setAttribute('transform', 'translate(' + cords.logo.x + ',' + cords.logo.y + ')');
 	},
 
-	animate: function(){
-		var that = this;
-		var cords = this.getCordinates();
-		var line1 = cords.lines.line1;
-		var line2 = cords.lines.line2;
+	// animate: function(){
+	// 	var that = this;
+	// 	var cords = this.getCordinates();
+	// 	var line1 = cords.lines.line1;
+	// 	var line2 = cords.lines.line2;
 
-		this.drawLineHoriz(
-			line1.target,
-			line1.params.x1,
-			line1.params.y1,
-			line1.params.x2,
-			line1.params.y2,
-			function(){
-				that.drawLineVert(
-					line2.target,
-					line2.params.x1,
-					line2.params.y1,
-					line2.params.x2,
-					line2.params.y2,
-					function(){
-						cords.logo.target.setAttribute('transform', 'translate(' + cords.logo.x + ',' + cords.logo.y + ')');
-					}
-				);
-			}
-		);
-	},
+	// 	this.drawLineHoriz(
+	// 		line1.target,
+	// 		line1.params.x1,
+	// 		line1.params.y1,
+	// 		line1.params.x2,
+	// 		line1.params.y2,
+	// 		function(){
+	// 			that.drawLineVert(
+	// 				line2.target,
+	// 				line2.params.x1,
+	// 				line2.params.y1,
+	// 				line2.params.x2,
+	// 				line2.params.y2,
+	// 				function(){
+	// 					cords.logo.target.setAttribute('transform', 'translate(' + cords.logo.x + ',' + cords.logo.y + ')');
+	// 				}
+	// 			);
+	// 		}
+	// 	);
+	// },
 
-	drawLineHoriz: function(line, x1, y1, x2, y2, cb){
-		var initialTs = new Date().getTime();
-		var duration = 4000; // this animation should last for 2 seconds
-		var handle = 0;
+	animate: function(list) {
+		var item,
+			duration,
+			end = 0;
 
-		line.setAttribute('x1', x1);
-		line.setAttribute('y1', y1);
-		line.setAttribute('y2', y2);
-		 
-		var draw = function() {
-			var progress = (Date.now() - initialTs)/duration;
-			if (progress >= 1) {
-				window.cancelAnimationFrame(handle);
-				line.setAttribute('x2', x2);
-				cb();
+		var step = function() {
+			var current = +new Date(),
+				remaining = end - current;
+
+			if(remaining < 60) {
+				if(item) {
+					item.run(1);//1 = progress is at 100%
+				}
+				item = list.shift();  //get the next item
+				if(item) {
+					duration = item.time*1000;
+					end = current + duration;
+					item.run(0);  //0 = progress is at 0%
+				} else {
+					return;
+				}
 			} else {
-				var calcProgress = x2 * progress;
-				var endPointPos = calcProgress <= x1 ? x1 : calcProgress;
-
-				line.setAttribute('x2', endPointPos);
-				handle = window.requestAnimationFrame(draw);
+				var rate = remaining/duration;
+				rate = item.easing ? 1 - Math.pow(rate, 3): 1 - rate;  //easing formula
+				item.run(rate);
 			}
+			_requestAnimationFrame(step);
 		};
-		draw();
-	},
-
-	drawLineVert: function(line, x1, y1, x2, y2, cb){
-		var initialTs = new Date().getTime();
-		var duration = 4000; // this animation should last for 2 seconds
-		var handle = 0;
-
-		line.setAttribute('x1', x1);
-		line.setAttribute('x2', x2);
-		line.setAttribute('y1', y1);
-		 
-		var draw = function() {
-			var progress = (Date.now() - initialTs)/duration;
-			if (progress >= 1) {
-				window.cancelAnimationFrame(handle);
-				line.setAttribute('y2', y2);
-				cb();
-			} else {
-				var calcProgress = y2 * progress
-				var endPointPos = calcProgress <= y1 ? y1 : calcProgress;
-
-				line.setAttribute('y2', endPointPos);
-				handle = window.requestAnimationFrame(draw);
-			}
-		};
-		draw();
-	},
+		step();
+	}
 
 };
 
-animate.animate();
+var cords = animate.getCordinates();
+var line1 = cords.lines.line1;
+var line2 = cords.lines.line2;
+
+animate.animate([
+	{
+		time: 2,
+		easing: false,
+		run: function(rate) {
+			var lineParams = line1.params;
+			var lineTarget = line1.target;
+			var endPointPos = lineParams.x2 * rate <= lineParams.x1 ? lineParams.x1 : lineParams.x2 * rate;
+
+			lineTarget.setAttribute('x1', lineParams.x1);
+			lineTarget.setAttribute('y1', lineParams.y1);
+			lineTarget.setAttribute('y2', lineParams.y2);
+			lineTarget.setAttribute('x2', endPointPos);
+		}
+	},
+	{
+		time: 2,
+		easing: false,
+		run: function(rate) {
+			var lineParams = line2.params;
+			var lineTarget = line2.target;
+			var endPointPos = lineParams.y2 * rate <= lineParams.y1 ? lineParams.y1 : lineParams.y2 * rate;
+
+			lineTarget.setAttribute('x1', lineParams.x1);
+			lineTarget.setAttribute('x2', lineParams.x2);
+			lineTarget.setAttribute('y1', lineParams.y1);
+			lineTarget.setAttribute('y2', endPointPos);
+		}
+	},
+	{
+		time: 0,
+		easing: false,
+		run: function(rate) {
+			cords.logo.target.setAttribute('transform', 'translate(' + cords.logo.x + ',' + cords.logo.y + ')');
+		}
+	},
+]);
