@@ -40,7 +40,7 @@ var animate = {
 				line1: {
 					target: line1,
 					params:{
-						x1: 540,
+						x1: 525,
 						x2: endLinePos,
 						y1: 133,
 						y2: 133
