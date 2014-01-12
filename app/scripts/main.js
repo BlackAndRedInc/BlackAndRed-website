@@ -143,7 +143,7 @@ $.each(letters,function(index, letter){
 });
 
 // set nav location
-nav.style.left = line2.params.x1 - 200 + 'px';
+nav.style.left = line2.params.x1 - 220 + 'px';
 
 //Set logo location
 cords.logo.target.setAttribute('transform', 'translate(' + cords.logo.x + ',' + cords.logo.y + ')');
