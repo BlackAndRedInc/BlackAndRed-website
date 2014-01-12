@@ -4,3 +4,10 @@
   width: images-sprite-width(gun);
   height: images-sprite-height(gun);
 }
+
+/* line 6, ../sass/images.sass */
+.images-jules {
+  display: inline-block;
+  width: images-sprite-width(jules);
+  height: images-sprite-height(jules);
+}

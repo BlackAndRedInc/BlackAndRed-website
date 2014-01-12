@@ -14,6 +14,11 @@ body {
 }
 
 /* line 13, ../sass/base.sass */
+svg {
+  z-index: -999;
+}
+
+/* line 16, ../sass/base.sass */
 .wrapper {
   padding: 35px;
   position: relative;

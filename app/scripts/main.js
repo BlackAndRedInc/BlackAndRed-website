@@ -6,11 +6,11 @@ var _requestAnimationFrame = function(win, t) {
 var animate = {
 
 	getCordinates: function(){
-		var nav = document.querySelector('.nav.svg');
-		var line1 = nav.querySelector('.line-1');
-		var line2 = nav.querySelector('.line-2');
-		var line3 = nav.querySelector('.line-3');
-		var logo = nav.querySelector('.logo');
+		var animation = document.querySelector('.animation.svg');
+		var line1 = animation.querySelector('.line-1');
+		var line2 = animation.querySelector('.line-2');
+		var line3 = animation.querySelector('.line-3');
+		var logo = animation.querySelector('.logo');
 
 		var strokeWidth = $('.draw').css('stroke-width');
 		var strokeWidthNum = strokeWidth.substring(0, strokeWidth.length - 2);
@@ -24,16 +24,19 @@ var animate = {
 		};
 
 		var letterPos = {
-			l: nav.querySelector('#l').getBBox(),
-			i: nav.querySelector('#i').getBBox()
+			l: animation.querySelector('#l').getBBox(),
+			i: animation.querySelector('#i').getBBox()
 		};
 
 		// var endLinePos = viewportWidth;
 		var endLinePos = logoPos.x + letterPos.l.x +3.5; // TODO: Don't know why I need to add 7 here
+		
 		var startLine3Pos = {
 			x: logoPos.x + letterPos.i.x + 4.25, // TODO: Don't know why I need to add 4.5 here
 			y: logoPos.y + letterPos.i.y + letterPos.i.height -1
 		};
+
+
 
 		return {
 			logo: {
@@ -124,6 +127,7 @@ var cords = animate.getCordinates();
 var line1 = cords.lines.line1;
 var line2 = cords.lines.line2;
 var line3 = cords.lines.line3;
+var nav = document.querySelector('.nav');
 var letterTargets = document.querySelectorAll('.logo path');
 var letters = $.map(letterTargets, function(letterTarget, index){
 	return {
@@ -138,10 +142,20 @@ $.each(letters,function(index, letter){
 	letter.target.style.strokeDashoffset = letter.length;
 });
 
+// set nav location
+nav.style.left = line2.params.x1 - 200 + 'px';
+
 //Set logo location
 cords.logo.target.setAttribute('transform', 'translate(' + cords.logo.x + ',' + cords.logo.y + ')');
 
+// Here is the nav transition in. Right now outside of animation loop
 
+$('.nav li').animate({
+	marginLeft: '0px'
+}, 5000);
+
+
+// Main animation loop
 animate.animate([
 	{
 		time: 2,
