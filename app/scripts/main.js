@@ -171,7 +171,7 @@ animate.animate([
 		}
 	},
 	{
-		time: 0,
+		time: 2,
 		easing: false,
 		run: function(rate) {
 			$.each(letters, function(index, letter){
