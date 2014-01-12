@@ -123,6 +123,23 @@ var animate = {
 var cords = animate.getCordinates();
 var line1 = cords.lines.line1;
 var line2 = cords.lines.line2;
+var letterTargets = document.querySelectorAll('.logo path');
+var letters = $.map(letterTargets, function(letterTarget, index){
+	return {
+		target: letterTarget,
+		length: letterTarget.getTotalLength()
+	};
+});
+
+// Set letter defaults
+$.each(letters,function(index, letter){
+	letter.target.style.strokeDasharray = letter.length + ' ' + letter.length; 
+	letter.target.style.strokeDashoffset = letter.length;
+});
+
+//Set logo location
+cords.logo.target.setAttribute('transform', 'translate(' + cords.logo.x + ',' + cords.logo.y + ')');
+
 
 animate.animate([
 	{
@@ -157,7 +174,10 @@ animate.animate([
 		time: 0,
 		easing: false,
 		run: function(rate) {
-			cords.logo.target.setAttribute('transform', 'translate(' + cords.logo.x + ',' + cords.logo.y + ')');
+			$.each(letters, function(index, letter){
+				document.querySelector('.logo #dot').style.fill = 'black';
+				letter.target.style.strokeDashoffset = Math.floor(letter.length * (1 - rate));
+			});
 		}
 	},
 ]);
