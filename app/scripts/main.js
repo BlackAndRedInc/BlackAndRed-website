@@ -171,8 +171,8 @@ animate.animate([
 		}
 	},
 	{
-		time: 2,
-		easing: false,
+		time: 1,
+		easing: true,
 		run: function(rate) {
 			$.each(letters, function(index, letter){
 				document.querySelector('.logo #dot').style.fill = 'black';
