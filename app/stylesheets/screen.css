@@ -155,7 +155,7 @@ svg {
 /* line 26, ../sass/modules.sass */
 .nav li {
   width: 220px;
-  padding: 10px 31px 10px 0;
+  padding: 5px 31px 10px 0;
   margin-left: 500px;
   border-bottom: solid 8px #ce0000;
 }
