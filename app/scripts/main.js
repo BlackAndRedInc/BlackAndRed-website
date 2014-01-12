@@ -123,6 +123,7 @@ var animate = {
 var cords = animate.getCordinates();
 var line1 = cords.lines.line1;
 var line2 = cords.lines.line2;
+var line3 = cords.lines.line3;
 var letterTargets = document.querySelectorAll('.logo path');
 var letters = $.map(letterTargets, function(letterTarget, index){
 	return {
@@ -178,6 +179,20 @@ animate.animate([
 				document.querySelector('.logo #dot').style.fill = 'black';
 				letter.target.style.strokeDashoffset = Math.floor(letter.length * (1 - rate));
 			});
+		}
+	},
+	{
+		time: 2,
+		easing: true,
+		run: function(rate) {
+			var lineParams = line3.params;
+			var lineTarget = line3.target;
+			var endPointPos = lineParams.y2 * rate <= lineParams.y1 ? lineParams.y1 : lineParams.y2 * rate;
+
+			lineTarget.setAttribute('x1', lineParams.x1);
+			lineTarget.setAttribute('x2', lineParams.x2);
+			lineTarget.setAttribute('y1', lineParams.y1);
+			lineTarget.setAttribute('y2', endPointPos);
 		}
 	},
 ]);
