@@ -154,6 +154,9 @@ $('.nav li').animate({
 	marginLeft: '0px'
 }, 5000);
 
+$('.nav li').each(function(index, menuItem){
+	$(menuItem).delay( 1000 * index ).fadeIn( 1000 )
+});
 
 // Main animation loop
 animate.animate([
