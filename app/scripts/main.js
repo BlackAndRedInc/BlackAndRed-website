@@ -69,7 +69,7 @@ var animate = {
 						x1: startLine3Pos.x,
 						x2: startLine3Pos.x,
 						y1: startLine3Pos.y,
-						y2: 1000
+						y2: 2000
 					}
 				}
 			}
