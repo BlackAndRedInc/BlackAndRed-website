@@ -155,10 +155,10 @@ cords.logo.target.setAttribute('transform', 'translate(' + cords.logo.x + ',' + 
 // }, 5000);
 
 $('.nav li').each(function(index, menuItem){
-	$(menuItem).delay(4000).delay( 500 * index ).animate({
+	$(menuItem).delay(4000).delay( 100 * index ).animate({
 	marginLeft: '0px',
 	opacity: 1
-}, 1000)
+}, 500)
 });
 
 // Main animation loop

@@ -156,8 +156,8 @@ svg {
 .nav li {
   width: 220px;
   padding: 5px 31px 10px 0;
-  margin-left: 100px;
-  opacity: -100;
+  margin-left: 50px;
+  opacity: 0;
 }
 /* line 32, ../sass/modules.sass */
 .nav li:hover {
