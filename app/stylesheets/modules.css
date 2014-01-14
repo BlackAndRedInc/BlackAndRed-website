@@ -32,8 +32,8 @@
 .nav li {
   width: 220px;
   padding: 5px 31px 10px 0;
-  display: none;
-  margin-left: 750px;
+  margin-left: 100px;
+  opacity: -100;
 }
 /* line 32, ../sass/modules.sass */
 .nav li:hover {

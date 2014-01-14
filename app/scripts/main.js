@@ -150,12 +150,15 @@ cords.logo.target.setAttribute('transform', 'translate(' + cords.logo.x + ',' + 
 
 // Here is the nav transition in. Right now outside of animation loop
 
-$('.nav li').animate({
-	marginLeft: '0px'
-}, 5000);
+// $('.nav li').animate({
+// 	marginLeft: '0px'
+// }, 5000);
 
 $('.nav li').each(function(index, menuItem){
-	$(menuItem).delay( 1000 * index ).fadeIn( 1000 )
+	$(menuItem).delay(4000).delay( 500 * index ).animate({
+	marginLeft: '0px',
+	opacity: 1
+}, 1000)
 });
 
 // Main animation loop
