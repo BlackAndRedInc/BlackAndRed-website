@@ -109,6 +109,22 @@ $(function(){
 			};
 		},
 
+		drawNav: function(cordinates){
+
+			var line2 = cordinates.lines.line2;
+
+			// Set nav location
+			$('.nav').css('left', line2.params.x1 - 220);
+
+			// draw in nav
+			$('.nav li').each(function(index, menuItem){
+				$(menuItem).delay(4500).delay( 100 * index ).animate({
+					marginLeft: '0px',
+					opacity: 1
+				}, 100);
+			});
+		},
+
 		quickDraw: function(){
 			var cords = this.getCordinates();
 
@@ -117,6 +133,8 @@ $(function(){
 					lineParams.target.setAttribute(param, value);
 				});
 			});
+
+			this.drawNav(cords);
 
 			cords.logo.target.setAttribute('transform', 'translate(' + cords.logo.x + ',' + cords.logo.y + ')');
 		},
@@ -133,6 +151,8 @@ $(function(){
 					length: letterTarget.getTotalLength()
 				};
 			});
+
+			this.drawNav(cords);
 
 			// Set letter defaults
 			$.each(letters,function(index, letter){
@@ -201,8 +221,6 @@ $(function(){
 	};
 
 	var coords = intro.getCordinates();
-
-	console.log(coords.logo);
 
 	intro.drawIntro();
 
