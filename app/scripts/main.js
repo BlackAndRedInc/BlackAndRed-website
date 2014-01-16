@@ -1,8 +1,8 @@
+'use strict';
 $(function(){
 	var _requestAnimationFrame = function(win, t) {
-		return win["webkitR" + t] || win["r" + t] || win["mozR" + t]
-		|| win["msR" + t] || function(fn) { setTimeout(fn, 60) };
-	}(window, "requestAnimationFrame");
+		return win['webkitR' + t] || win['r' + t] || win['mozR' + t] || win['msR' + t] || function(fn) { setTimeout(fn, 60) };
+	}(window, 'requestAnimationFrame');
 
 	var animate = {
 		animate: function(list) {
@@ -126,9 +126,8 @@ $(function(){
 			var line1 = cords.lines.line1;
 			var line2 = cords.lines.line2;
 			var line3 = cords.lines.line3;
-			var nav = document.querySelector('.nav');
 			var letterTargets = document.querySelectorAll('.draw-logo path');
-			var letters = $.map(letterTargets, function(letterTarget, index){
+			var letters = $.map(letterTargets, function(letterTarget){
 				return {
 					target: letterTarget,
 					length: letterTarget.getTotalLength()
@@ -137,7 +136,7 @@ $(function(){
 
 			// Set letter defaults
 			$.each(letters,function(index, letter){
-				letter.target.style.strokeDasharray = letter.length + ' ' + letter.length; 
+				letter.target.style.strokeDasharray = letter.length + ' ' + letter.length;
 				letter.target.style.strokeDashoffset = letter.length;
 			});
 
@@ -201,5 +200,20 @@ $(function(){
 		}
 	};
 
+	var coords = intro.getCordinates();
+
+	console.log(coords.logo);
+
 	intro.drawIntro();
+
+	// Sticky Nav
+	$('.draw-logo').waypoint(function(direction) {
+		$('.animation-intro').css( direction === 'down' ? {
+			position: 'fixed',
+			top: -coords.logo.y + 75
+		}:{
+			position: 'absolute',
+			top: 0
+		});
+	},{'offset': 75});
 });

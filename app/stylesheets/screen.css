@@ -112,14 +112,20 @@ body {
 }
 
 /* line 13, ../sass/base.sass */
+html, body {
+  height: 100%;
+}
+
+/* line 16, ../sass/base.sass */
 svg {
   z-index: -999;
 }
 
-/* line 16, ../sass/base.sass */
+/* line 19, ../sass/base.sass */
 .wrapper {
   padding: 35px;
   position: relative;
+  height: 100%;
 }
 
 /* line 1, ../sass/modules.sass */
@@ -143,6 +149,16 @@ svg {
 }
 
 /* line 17, ../sass/modules.sass */
+.site-nav-placeholder {
+  position: fixed;
+  min-width: 200px;
+  width: 25%;
+  float: right;
+  background-color: orange;
+  min-height: 100%;
+}
+
+/* line 25, ../sass/modules.sass */
 .nav {
   font-weight: bold;
   position: absolute;
@@ -152,38 +168,63 @@ svg {
   font-size: 20px;
   overflow: hidden;
 }
-/* line 26, ../sass/modules.sass */
+/* line 33, ../sass/modules.sass */
 .nav li {
   width: 220px;
   padding: 5px 31px 10px 0;
   margin-left: 50px;
   opacity: 0;
 }
-/* line 32, ../sass/modules.sass */
+/* line 38, ../sass/modules.sass */
 .nav li:hover {
   cursor: pointer;
 }
 
-/* line 36, ../sass/modules.sass */
+/* line 42, ../sass/modules.sass */
+section {
+  margin-right: 500px;
+}
+/* line 44, ../sass/modules.sass */
+section .section-title {
+  font-weight: bold;
+  font-size: 45px;
+}
+/* line 47, ../sass/modules.sass */
+section .section-summary {
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+/* line 51, ../sass/modules.sass */
+section .section-content {
+  font-size: 16px;
+  line-height: 1.25;
+}
+/* line 54, ../sass/modules.sass */
+section .section-content p {
+  margin-bottom: 10px;
+}
+
+/* line 57, ../sass/modules.sass */
 .animation-intro {
   position: absolute;
   width: 100%;
   height: 1300px;
   top: 0;
 }
-/* line 42, ../sass/modules.sass */
+/* line 63, ../sass/modules.sass */
 .animation-intro #dot {
   stroke: none;
 }
 
-/* line 45, ../sass/modules.sass */
+/* line 66, ../sass/modules.sass */
 .draw {
   fill: none;
   stroke: black;
   stroke-width: 7px;
 }
 
-/* line 50, ../sass/modules.sass */
+/* line 71, ../sass/modules.sass */
 .draw-logo {
   font-family: brandishregular;
   font-size: 50px;
