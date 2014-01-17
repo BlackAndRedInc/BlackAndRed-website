@@ -81,10 +81,10 @@ $(function(){
 					line1: {
 						target: line1,
 						params:{
-							x1: 525,
+							x1: 565,
 							x2: endLinePos,
-							y1: 133,
-							y2: 133
+							y1: 137,
+							y2: 137
 						}
 					},
 					line2: {
@@ -114,7 +114,7 @@ $(function(){
 			var line2 = cordinates.lines.line2;
 
 			// Set nav location
-			$('.nav').css('left', line2.params.x1 - 220);
+			$('.nav').css('left', line2.params.x1 - 250);
 
 			// draw in nav
 			$('.nav li').each(function(index, menuItem){
@@ -224,14 +224,51 @@ $(function(){
 
 	intro.drawIntro();
 
+
+
 	// Sticky Nav
+	$('.nav').waypoint(function(direction){
+		$(this).toggleClass('is-sticky-nav', direction === 'down');
+	});
+
+	// Sticky Logo
 	$('.draw-logo').waypoint(function(direction) {
 		$('.animation-intro').css( direction === 'down' ? {
 			position: 'fixed',
-			top: -coords.logo.y + 75
+			top: -coords.logo.y + 215
 		}:{
 			position: 'absolute',
 			top: 0
 		});
-	},{'offset': 75});
+	},{'offset': 215});
+
+	// Transition Sections
+	$('section')
+	.waypoint(function (direction) {
+
+		direction === 'down' && $('section.is-selected').animate({
+			opacity: 0
+		}, 500);
+		
+		$('section.is-selected').removeClass('is-selected');
+		$(this).addClass('is-selected');
+
+		$('.is-alt-theme').removeClass('is-alt-theme');
+
+		if(direction ==='down' && $(this).index() % 2){
+			$('body, .draw').addClass('is-alt-theme');
+		}
+
+	}, { 'offset': '50%' })
+	.waypoint(function(direction){
+		if(direction === 'up'){
+			$('section.is-selected').removeClass('is-selected');
+			$(this).addClass('is-selected');
+			$('section.is-selected').animate({
+				opacity: 1
+			}, 500);
+		}
+	}, { 'offset': function() {
+		return -$(this).height()*.75;
+	}});
 });

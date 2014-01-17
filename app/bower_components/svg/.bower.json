@@ -1,0 +1,14 @@
+{
+  "name": "svg",
+  "homepage": "https://github.com/kbwood/svg",
+  "_release": "7e1ab1cd30",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "7e1ab1cd30c805d56a2a23e3054b1482627f3e0f"
+  },
+  "_source": "https://github.com/kbwood/svg.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/kbwood/svg.git",
+  "_direct": true
+}
