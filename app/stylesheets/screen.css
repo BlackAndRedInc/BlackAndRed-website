@@ -122,11 +122,23 @@ html, body {
 }
 
 /* line 18, ../sass/base.sass */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* line 22, ../sass/base.sass */
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* line 26, ../sass/base.sass */
 svg {
   z-index: -999;
 }
 
-/* line 21, ../sass/base.sass */
+/* line 29, ../sass/base.sass */
 .wrapper {
   padding: 35px;
 }
@@ -151,8 +163,18 @@ svg {
   stroke: none !important;
   fill: #ce0000 !important;
 }
+/* line 12, ../sass/states.sass */
+.is-alt-theme a {
+  color: #ce0000;
+  text-decoration: none;
+}
+/* line 16, ../sass/states.sass */
+.is-alt-theme a:hover {
+  color: #ce0000;
+  text-decoration: none;
+}
 
-/* line 13, ../sass/states.sass */
+/* line 20, ../sass/states.sass */
 .is-sticky-nav {
   position: fixed !important;
   top: 0 !important;
@@ -229,7 +251,7 @@ section .section-content p {
 }
 
 /* line 52, ../sass/modules.sass */
-section.home {
+section#home {
   padding-top: 0;
   padding-bottom: 0;
 }

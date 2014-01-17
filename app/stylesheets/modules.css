@@ -69,7 +69,7 @@ section .section-content p {
 }
 
 /* line 52, ../sass/modules.sass */
-section.home {
+section#home {
   padding-top: 0;
   padding-bottom: 0;
 }
