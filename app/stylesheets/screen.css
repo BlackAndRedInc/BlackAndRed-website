@@ -146,8 +146,13 @@ svg {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+/* line 9, ../sass/states.sass */
+.is-alt-theme #dot {
+  stroke: none !important;
+  fill: #ce0000 !important;
+}
 
-/* line 10, ../sass/states.sass */
+/* line 13, ../sass/states.sass */
 .is-sticky-nav {
   position: fixed !important;
   top: 0 !important;
