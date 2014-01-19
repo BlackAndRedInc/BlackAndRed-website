@@ -95,13 +95,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 @font-face {
   font-family: "brandishregular";
-  src: url("/assets/fonts/font-webfont.eot");
-  src: url("/assets/fonts/font-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/font-webfont.woff") format("woff"), url("/assets/fonts/font-webfont.ttf") format("truetype"), url("/assets/fonts/font-webfont.svg#brandishregular") format("svg");
+  src: url("/assets/fonts/brandish/font-webfont.eot");
+  src: url("/assets/fonts/brandish/font-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/brandish/font-webfont.woff") format("woff"), url("/assets/fonts/brandish/font-webfont.ttf") format("truetype"), url("/assets/fonts/brandish/font-webfont.svg#brandishregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
-/* line 12, ../sass/base.sass */
+@font-face {
+  font-family: "black-and-red-inc-clients";
+  src: url("/assets/fonts/client-logos/black-and-red-inc-clients.eot");
+  src: url("/assets/fonts/client-logos/black-and-red-inc-clients.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/client-logos/black-and-red-inc-clients.woff") format("woff"), url("/assets/fonts/client-logos/black-and-red-inc-clients.ttf") format("truetype"), url("/assets/fonts/client-logos/black-and-red-inc-clients.svg#brandishregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 19, ../sass/base.sass */
 body {
   background-color: #ce0000;
   font-family: "Lato", sans-serif;
@@ -112,29 +120,35 @@ body {
   transition: background-color 0.5s;
 }
 
-/* line 18, ../sass/base.sass */
+/* line 25, ../sass/base.sass */
 html, body {
   height: 100%;
 }
 
-/* line 21, ../sass/base.sass */
+/* line 28, ../sass/base.sass */
 a {
   color: black;
   text-decoration: none;
 }
 
-/* line 25, ../sass/base.sass */
+/* line 32, ../sass/base.sass */
 a:hover {
   color: black;
   text-decoration: none;
 }
 
-/* line 29, ../sass/base.sass */
+/* line 36, ../sass/base.sass */
 svg {
   z-index: -999;
 }
 
-/* line 32, ../sass/base.sass */
+/* line 39, ../sass/base.sass */
+footer {
+  margin-top: 25%;
+  text-align: center;
+}
+
+/* line 43, ../sass/base.sass */
 .wrapper {
   padding: 35px;
 }
@@ -170,7 +184,7 @@ svg {
   color: black;
 }
 /* line 18, ../sass/states.sass */
-.is-alt-theme .section-content ul.list-text {
+.is-alt-theme .section-content .list-text {
   background-color: black;
   color: #ce0000;
 }
@@ -287,7 +301,7 @@ section#home {
 }
 
 /* line 77, ../sass/modules.sass */
-.section-content ul.list-text {
+.list-text {
   float: left;
   margin-right: 20px;
   width: 40%;
@@ -295,12 +309,22 @@ section#home {
   color: #ce0000;
 }
 /* line 83, ../sass/modules.sass */
-.section-content ul.list-text li {
+.list-text li {
   padding: 10px 0;
 }
 /* line 85, ../sass/modules.sass */
-.section-content ul.list-text li:before {
+.list-text li:before {
   content: "----";
   position: relative;
   left: -5px;
+}
+
+/* line 90, ../sass/modules.sass */
+.list-clients {
+  font-family: "black-and-red-inc-clients";
+  font-size: 10em;
+}
+/* line 93, ../sass/modules.sass */
+.list-clients li {
+  float: left;
 }
