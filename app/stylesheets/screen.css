@@ -266,7 +266,7 @@ footer {
 /* line 52, ../sass/modules.sass */
 section {
   opacity: 0;
-  margin-right: 500px;
+  margin-right: 45%;
   padding: 15% 0;
 }
 /* line 56, ../sass/modules.sass */
@@ -327,4 +327,27 @@ section#home {
 /* line 93, ../sass/modules.sass */
 .list-clients li {
   float: left;
+}
+
+@media screen and (min-width: 1px) and (max-width: 1200px) {
+  /* line 2, ../sass/media.sass */
+  section {
+    margin-right: 30%;
+  }
+
+  /* line 6, ../sass/media.sass */
+  nav .nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 1px) and (max-width: 1023px) {
+  /* line 10, ../sass/media.sass */
+  section {
+    margin-right: 0;
+  }
+
+  /* line 12, ../sass/media.sass */
+  nav {
+    display: none;
+  }
 }

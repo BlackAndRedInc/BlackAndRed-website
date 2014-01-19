@@ -224,21 +224,10 @@ $(function(){
 
 	intro.drawIntro();
 
-
-
 	// Sticky Nav
 	$('.nav').waypoint(function(direction){
 		$(this).toggleClass('is-sticky-nav', direction === 'down');
 	});
-
-	// Visual Scroll
-	// $('nav').find('a').click(function(e) {
-	// 	e.preventDefault();
-	// 	var section = $(this).attr('href');
-	// 	$('html, body').animate({
-	// 		scrollTop: $(section).offset().top
-	// 	});
-	// }, 5000);
 
 	// Sticky Logo
 	$('.draw-logo').waypoint(function(direction) {
