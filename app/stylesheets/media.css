@@ -19,4 +19,9 @@
   nav {
     display: none;
   }
+
+  /* line 13, ../sass/media.sass */
+  footer {
+    margin-top: 75%;
+  }
 }
