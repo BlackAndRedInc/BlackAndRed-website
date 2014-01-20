@@ -268,13 +268,15 @@ section {
   opacity: 0;
   margin-right: 45%;
   padding: 15% 0;
+  overflow: hidden;
+  *zoom: 1;
 }
-/* line 56, ../sass/modules.sass */
+/* line 57, ../sass/modules.sass */
 section .section-title {
   font-weight: bold;
   font-size: 45px;
 }
-/* line 59, ../sass/modules.sass */
+/* line 60, ../sass/modules.sass */
 section .section-summary {
   padding: 10px 0;
   font-size: 20px;
@@ -283,24 +285,24 @@ section .section-summary {
   background-color: black;
   color: #ce0000;
 }
-/* line 66, ../sass/modules.sass */
+/* line 67, ../sass/modules.sass */
 section .section-content {
   font-size: 16px;
   line-height: 1.25;
   margin: 10px 0;
 }
-/* line 70, ../sass/modules.sass */
+/* line 71, ../sass/modules.sass */
 section .section-content p {
   margin-bottom: 10px;
 }
 
-/* line 73, ../sass/modules.sass */
+/* line 74, ../sass/modules.sass */
 section#home {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* line 77, ../sass/modules.sass */
+/* line 78, ../sass/modules.sass */
 .list-text {
   float: left;
   margin-right: 20px;
@@ -308,25 +310,15 @@ section#home {
   background-color: black;
   color: #ce0000;
 }
-/* line 83, ../sass/modules.sass */
+/* line 84, ../sass/modules.sass */
 .list-text li {
   padding: 10px 0;
 }
-/* line 85, ../sass/modules.sass */
+/* line 86, ../sass/modules.sass */
 .list-text li:before {
   content: "----";
   position: relative;
   left: -5px;
-}
-
-/* line 90, ../sass/modules.sass */
-.list-clients {
-  font-family: "black-and-red-inc-clients";
-  font-size: 10em;
-}
-/* line 93, ../sass/modules.sass */
-.list-clients li {
-  float: left;
 }
 
 @media screen and (min-width: 1px) and (max-width: 1200px) {
