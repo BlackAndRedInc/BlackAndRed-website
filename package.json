@@ -1,0 +1,22 @@
+{
+  "name": "BlackAndRed.io",
+  "version": "0.2.0",
+  "private": true,
+  "dependencies": {
+    "grunt": "0.4.2",
+    "grunt-cli": "~0.1.13",
+    "grunt-sync": "~0.0.4",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-sails-linker": "~0.9.5",
+    "grunt-contrib-jst": "~0.5.0",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-contrib-compass": "~0.7.2"
+  },
+  "devDependencies": {
+    "grunt-notify": "~0.3.0"
+  }
+}
