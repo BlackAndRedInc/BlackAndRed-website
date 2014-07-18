@@ -6,6 +6,8 @@
 @import "compass/utilities/"
 @import "compass/utilities/general/clearfix"
 @import "compass/utilities/sprites"
+@import "compass/reset"
+
 // Fonts
 @font-face
 	font-family: "Gothic821"
@@ -23,8 +25,36 @@
 //	BASE
 ////////////////////////
 
+// Resets
+*
+	@include box-sizing(border-box)
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+// Colors
+$red: #ce0000
+$black: black
+$colorHighlight: white
+
+// Type
+h1, h2, h3, h4, .heading-1, .heading-2, .heading-3, .heading-4
+	text-transform: uppercase
+	font-family: "Gothic821", Helvetica, Serif
+
+h1, h2, .heading-1, .heading-2
+	font-size: 4em
+h3, .heading-3
+	font-size: 1.375em
+h4, .heading-4
+	font-size: 2em
+
+// General
 body
-	background-color: blue
+	font-size: 16px
+	font-family: "Oswald", Helvetica, Serif
+
+
+
 
 
 ////////////////////////
@@ -33,13 +63,42 @@ body
 
 
 ////////////////////////
-//	LAYOUT
-////////////////////////
-
-
-////////////////////////
 //	MODULES
 ////////////////////////
+
+.highlight
+	color: $colorHighlight
+
+.l-page-section
+	min-height: 37.5em
+	padding-top: 10.3125em
+	padding-left: 2.5em
+	&:nth-child(even)
+		background-color: $black
+		color: $red
+		h3, .heading-3
+			background-color: $red
+			color: $black
+	&:nth-child(odd)
+		background-color: $red
+		color: $black
+		h3, .heading-3
+			background-color: $black
+			color: $red
+
+	.content-wrapper
+		width: 32.88em
+		height: 100%
+		h3, .heading-3
+			padding: 0.45453em
+		& > *
+			margin-bottom: 20px
+			width: 100%
+		&:last-child
+			margin-bottom: 0
+		.section-content
+			color: $colorHighlight
+
 
 
 ////////////////////////
