@@ -198,68 +198,6 @@ body {
 }
 
 /* line 112, ../../styles/sass/screen.sass */
-.l-page-section {
-  height: 37.5em;
-  padding-left: 2.5em;
-}
-/* line 115, ../../styles/sass/screen.sass */
-.l-page-section:nth-child(even) {
-  background-color: black;
-  color: #ce0000;
-}
-/* line 118, ../../styles/sass/screen.sass */
-.l-page-section:nth-child(even) h3, .l-page-section:nth-child(even) .heading-3 {
-  background-color: #ce0000;
-  color: black;
-}
-/* line 121, ../../styles/sass/screen.sass */
-.l-page-section:nth-child(even) .nav {
-  background-image: url("/images/menu-red.png");
-}
-/* line 123, ../../styles/sass/screen.sass */
-.l-page-section:nth-child(odd) {
-  background-color: #ce0000;
-  color: black;
-}
-/* line 126, ../../styles/sass/screen.sass */
-.l-page-section:nth-child(odd) h3, .l-page-section:nth-child(odd) .heading-3 {
-  background-color: black;
-  color: #ce0000;
-}
-/* line 129, ../../styles/sass/screen.sass */
-.l-page-section:nth-child(odd) .nav {
-  background-image: url("/images/menu-black.png");
-}
-/* line 131, ../../styles/sass/screen.sass */
-.l-page-section .content-wrapper {
-  padding-top: 10.3125em;
-  width: 32.88em;
-  height: 100%;
-  float: left;
-}
-/* line 136, ../../styles/sass/screen.sass */
-.l-page-section .content-wrapper h3, .l-page-section .content-wrapper .heading-3 {
-  padding: 0.45453em;
-}
-/* line 138, ../../styles/sass/screen.sass */
-.l-page-section .content-wrapper > * {
-  margin-bottom: 20px;
-  width: 100%;
-}
-/* line 141, ../../styles/sass/screen.sass */
-.l-page-section .content-wrapper .bullet-list {
-  width: 48.5%;
-}
-/* line 143, ../../styles/sass/screen.sass */
-.l-page-section .content-wrapper:last-child {
-  margin-bottom: 0;
-}
-/* line 145, ../../styles/sass/screen.sass */
-.l-page-section .content-wrapper .section-content {
-  color: white;
-}
-
-/* line 147, ../../styles/sass/screen.sass */
 .nav {
   width: 45%;
   height: 100%;
@@ -270,27 +208,89 @@ body {
   background-position: 100% 100%;
 }
 
-/* line 158, ../../styles/sass/screen.sass */
+/* line 121, ../../styles/sass/screen.sass */
+.l-page-section {
+  height: 37.5em;
+  padding-left: 2.5em;
+}
+/* line 124, ../../styles/sass/screen.sass */
+.l-page-section:nth-child(even) {
+  background-color: black;
+  color: #ce0000;
+}
+/* line 127, ../../styles/sass/screen.sass */
+.l-page-section:nth-child(even) h3, .l-page-section:nth-child(even) .heading-3 {
+  background-color: #ce0000;
+  color: black;
+}
+/* line 130, ../../styles/sass/screen.sass */
+.l-page-section:nth-child(even) .nav {
+  background-image: url("/images/menu-red.png");
+}
+/* line 132, ../../styles/sass/screen.sass */
+.l-page-section:nth-child(odd) {
+  background-color: #ce0000;
+  color: black;
+}
+/* line 135, ../../styles/sass/screen.sass */
+.l-page-section:nth-child(odd) h3, .l-page-section:nth-child(odd) .heading-3 {
+  background-color: black;
+  color: #ce0000;
+}
+/* line 138, ../../styles/sass/screen.sass */
+.l-page-section:nth-child(odd) .nav {
+  background-image: url("/images/menu-black.png");
+}
+/* line 140, ../../styles/sass/screen.sass */
+.l-page-section .content-wrapper {
+  padding-top: 10.3125em;
+  width: 32.88em;
+  height: 100%;
+  float: left;
+}
+/* line 145, ../../styles/sass/screen.sass */
+.l-page-section .content-wrapper h3, .l-page-section .content-wrapper .heading-3 {
+  padding: 0.45453em;
+}
+/* line 147, ../../styles/sass/screen.sass */
+.l-page-section .content-wrapper > * {
+  margin-bottom: 20px;
+  width: 100%;
+}
+/* line 150, ../../styles/sass/screen.sass */
+.l-page-section .content-wrapper .bullet-list {
+  width: 48.5%;
+}
+/* line 152, ../../styles/sass/screen.sass */
+.l-page-section .content-wrapper:last-child {
+  margin-bottom: 0;
+}
+/* line 154, ../../styles/sass/screen.sass */
+.l-page-section .content-wrapper .section-content {
+  color: white;
+}
+
+/* line 159, ../../styles/sass/screen.sass */
 .section-home {
   height: 49.75em;
   position: relative;
 }
-/* line 162, ../../styles/sass/screen.sass */
+/* line 163, ../../styles/sass/screen.sass */
 .section-home .content-wrapper {
   padding-top: 2.5em;
 }
-/* line 164, ../../styles/sass/screen.sass */
+/* line 165, ../../styles/sass/screen.sass */
 .section-home .gun {
   font-size: 0.85em;
 }
-/* line 166, ../../styles/sass/screen.sass */
+/* line 167, ../../styles/sass/screen.sass */
 .section-home .jules {
   position: absolute;
   bottom: 0;
   height: 35em;
 }
 
-/* line 173, ../../styles/sass/screen.sass */
+/* line 174, ../../styles/sass/screen.sass */
 .section-contact .content-wrapper .bullet-list {
   width: 55%;
 }
