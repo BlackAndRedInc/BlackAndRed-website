@@ -5,10 +5,10 @@ module.exports = function(grunt) {
 		compass: {
 			prod: {
 				options: {
-					cssDir: 'app/styles/css',
+					cssDir: 'app/generated/css',
 					sassDir: 'app/styles/sass',
-					imagesDir: 'app',
-					// generatedImagesDir: 'app/generated/images',
+					imagesDir: 'app/images',
+					generatedImagesDir: 'app/generated/sprites',
 					// httpImagesPath: '/SiteCollectionImages/BrandHub/jello-o',
 					relativeAssets: true,
 					raw: 'preferred_syntax = :sass\n'
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 				// Assets to watch:
 				files: [
 					'app/styles/**/*.sass',
-					'app/img/**/*'
+					'app/images/*'
 				],
 
 				// When assets are changed:

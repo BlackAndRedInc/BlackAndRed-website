@@ -8,6 +8,12 @@
 @import "compass/utilities/sprites"
 @import "compass/reset"
 
+$icons-sprite-dimensions: true
+$icons-spacing: 20px
+
+@import "icons/*.png"
+@include all-icons-sprites
+
 // Fonts
 @font-face
 	font-family: "Gothic821"
@@ -17,6 +23,13 @@
 	// Legacy iOS
 	font-style: normal
 	font-weight: 400
+
+@font-face
+	font-family: 'BR-Icons'
+	src: url('/../../assets/fonts/icons/BlackRedInc.eot?7ew5cb')
+	src: url('/../../assets/fonts/icons/BlackRedInc.eot?#iefix7ew5cb') format("embedded-opentype"), url('/../../assets/fonts/icons/BlackRedInc.woff?7ew5cb') format("woff"), url('/../../assets/fonts/icons/BlackRedInc.ttf?7ew5cb') format("truetype"), url('/../../assets/fonts/icons/BlackRedInc.svg?7ew5cb#BlackRedInc') format("svg")
+	font-weight: normal
+	font-style: normal
 
 @import url("http://fonts.googleapis.com/css?family=Oswald")
 
@@ -50,7 +63,6 @@ h4, .heading-4
 
 // General
 body
-	font-size: 16px
 	font-family: "Oswald", Helvetica, Serif
 
 
@@ -61,17 +73,44 @@ body
 //	OVERRIDES
 ////////////////////////
 
+////////////////////////
+//	UTIL
+////////////////////////
+.pull-left
+	float: left
+
+.pull-right
+	float: right
 
 ////////////////////////
 //	MODULES
 ////////////////////////
 
+// General
 .highlight
 	color: $colorHighlight
 
+.icon
+	display: inline-block
+	font-family: "BR-Icons"
+
+.bullet-list
+	background-color: black
+	color: white
+	padding: .625em 0 .625em .3125em
+	li
+		padding-left: icons-sprite-width(bullet)+5px
+		margin-bottom: .625em
+		background-image: url('/images/icons/bullet.png')	
+		background-repeat: no-repeat	
+		background-position-y: 3px
+		text-transform: uppercase
+		font-family: "Gothic821", Helvetica, Serif
+	li:last-child
+		margin-bottom: 0
+
 .l-page-section
-	min-height: 37.5em
-	padding-top: 10.3125em
+	height: 37.5em
 	padding-left: 2.5em
 	&:nth-child(even)
 		background-color: $black
@@ -79,29 +118,60 @@ body
 		h3, .heading-3
 			background-color: $red
 			color: $black
+		.nav
+			background-image: url('/images/menu-red.png')
 	&:nth-child(odd)
 		background-color: $red
 		color: $black
 		h3, .heading-3
 			background-color: $black
 			color: $red
-
+		.nav
+			background-image: url('/images/menu-black.png')
 	.content-wrapper
+		padding-top: 10.3125em
 		width: 32.88em
 		height: 100%
+		float: left
 		h3, .heading-3
 			padding: 0.45453em
 		& > *
 			margin-bottom: 20px
 			width: 100%
+		.bullet-list
+			width: 48.5%
 		&:last-child
 			margin-bottom: 0
 		.section-content
 			color: $colorHighlight
+.nav
+	width: 45%
+	height: 100%
+	float: right
+	background-image: url('/images/menu-black.png')
+	background-repeat: no-repeat
+	background-attachment: fixed
+	background-position: 100% 100%
+	
 
 // SECTION SPECIFIC OVERRIDES
 .section-home
-	padding-top: 2.5em
+	height: 49.75em
+	position: relative
+	background
+	.content-wrapper
+		padding-top: 2.5em
+	.gun
+		font-size: .85em
+	.jules
+		position: absolute
+		bottom: 0
+		height: 35em
+
+.section-contact
+	.content-wrapper
+		.bullet-list
+			width: 55%
 
 
 
