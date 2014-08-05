@@ -64,42 +64,49 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 74, icons/*.png */
-.icons-sprite, .icons-arrow-left, .icons-arrow-right, .icons-bullet, .icons-gun, .icons-phone {
-  background: url('../sprites/icons-sd2045d70dc.png') no-repeat;
+/* line 82, icons/*.png */
+.icons-sprite, .icons-arrow-left, .icons-arrow-right, .icons-bullet-red, .icons-bullet, .icons-gun, .icons-phone {
+  background: url('../sprites/icons-s3a6faa0097.png') no-repeat;
 }
 
 /* line 60, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-arrow-left {
-  background-position: 0 -138px;
+  background-position: 0 -167px;
   height: 24px;
   width: 16px;
 }
 
 /* line 60, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-arrow-right {
-  background-position: 0 -182px;
+  background-position: 0 -211px;
   height: 24px;
   width: 16px;
 }
 
 /* line 60, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-bullet-red {
+  background-position: 0 0;
+  height: 9px;
+  width: 29px;
+}
+
+/* line 60, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-bullet {
-  background-position: 0 -226px;
+  background-position: 0 -255px;
   height: 9px;
   width: 29px;
 }
 
 /* line 60, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-gun {
-  background-position: 0 0;
+  background-position: 0 -29px;
   height: 53px;
   width: 77px;
 }
 
 /* line 60, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-phone {
-  background-position: 0 -73px;
+  background-position: 0 -102px;
   height: 45px;
   width: 46px;
 }
@@ -153,36 +160,43 @@ h4, .heading-4 {
 /* line 65, ../../styles/sass/screen.sass */
 body {
   font-family: "Oswald", Helvetica, Serif;
+  font-size: 1.3vw;
 }
 
-/* line 79, ../../styles/sass/screen.sass */
+/* line 69, ../../styles/sass/screen.sass */
+.main {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 76, ../../styles/sass/screen.sass */
 .pull-left {
   float: left;
 }
 
-/* line 82, ../../styles/sass/screen.sass */
+/* line 79, ../../styles/sass/screen.sass */
 .pull-right {
   float: right;
 }
 
-/* line 90, ../../styles/sass/screen.sass */
+/* line 87, ../../styles/sass/screen.sass */
 .highlight {
   color: white;
 }
 
-/* line 93, ../../styles/sass/screen.sass */
+/* line 90, ../../styles/sass/screen.sass */
 .icon {
   display: inline-block;
   font-family: "BR-Icons";
 }
 
-/* line 97, ../../styles/sass/screen.sass */
+/* line 94, ../../styles/sass/screen.sass */
 .bullet-list {
   background-color: black;
   color: white;
   padding: 0.625em 0 0.625em 0.3125em;
 }
-/* line 101, ../../styles/sass/screen.sass */
+/* line 98, ../../styles/sass/screen.sass */
 .bullet-list li {
   padding-left: 34px;
   margin-bottom: 0.625em;
@@ -192,105 +206,256 @@ body {
   text-transform: uppercase;
   font-family: "Gothic821", Helvetica, Serif;
 }
-/* line 109, ../../styles/sass/screen.sass */
+/* line 106, ../../styles/sass/screen.sass */
 .bullet-list li:last-child {
   margin-bottom: 0;
 }
 
-/* line 112, ../../styles/sass/screen.sass */
-.nav {
-  width: 45%;
-  height: 100%;
-  float: right;
-  background-image: url("/images/menu-black.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 100% 100%;
-}
-
-/* line 121, ../../styles/sass/screen.sass */
+/* line 109, ../../styles/sass/screen.sass */
 .l-page-section {
-  height: 37.5em;
+  height: 49.75em;
   padding-left: 2.5em;
+  overflow-y: hidden;
+  position: relative;
 }
-/* line 124, ../../styles/sass/screen.sass */
+/* line 114, ../../styles/sass/screen.sass */
 .l-page-section:nth-child(even) {
   background-color: black;
   color: #ce0000;
 }
-/* line 127, ../../styles/sass/screen.sass */
+/* line 117, ../../styles/sass/screen.sass */
 .l-page-section:nth-child(even) h3, .l-page-section:nth-child(even) .heading-3 {
   background-color: #ce0000;
   color: black;
 }
-/* line 130, ../../styles/sass/screen.sass */
+/* line 120, ../../styles/sass/screen.sass */
 .l-page-section:nth-child(even) .nav {
-  background-image: url("/images/menu-red.png");
+  background-image: url("/images/menu-red.svg");
 }
-/* line 132, ../../styles/sass/screen.sass */
+/* line 122, ../../styles/sass/screen.sass */
 .l-page-section:nth-child(odd) {
   background-color: #ce0000;
   color: black;
 }
-/* line 135, ../../styles/sass/screen.sass */
+/* line 125, ../../styles/sass/screen.sass */
 .l-page-section:nth-child(odd) h3, .l-page-section:nth-child(odd) .heading-3 {
   background-color: black;
   color: #ce0000;
 }
-/* line 138, ../../styles/sass/screen.sass */
+/* line 128, ../../styles/sass/screen.sass */
 .l-page-section:nth-child(odd) .nav {
-  background-image: url("/images/menu-black.png");
+  background-image: url("/images/menu-black.svg");
 }
-/* line 140, ../../styles/sass/screen.sass */
+/* line 130, ../../styles/sass/screen.sass */
 .l-page-section .content-wrapper {
   padding-top: 10.3125em;
   width: 32.88em;
   height: 100%;
   float: left;
 }
-/* line 145, ../../styles/sass/screen.sass */
+/* line 135, ../../styles/sass/screen.sass */
 .l-page-section .content-wrapper h3, .l-page-section .content-wrapper .heading-3 {
   padding: 0.45453em;
 }
-/* line 147, ../../styles/sass/screen.sass */
+/* line 137, ../../styles/sass/screen.sass */
 .l-page-section .content-wrapper > * {
   margin-bottom: 20px;
   width: 100%;
 }
-/* line 150, ../../styles/sass/screen.sass */
+/* line 140, ../../styles/sass/screen.sass */
 .l-page-section .content-wrapper .bullet-list {
   width: 48.5%;
 }
-/* line 152, ../../styles/sass/screen.sass */
+/* line 142, ../../styles/sass/screen.sass */
 .l-page-section .content-wrapper:last-child {
   margin-bottom: 0;
 }
-/* line 154, ../../styles/sass/screen.sass */
+/* line 144, ../../styles/sass/screen.sass */
 .l-page-section .content-wrapper .section-content {
   color: white;
 }
 
+/* line 147, ../../styles/sass/screen.sass */
+.nav {
+  position: absolute;
+  right: 0;
+  width: 53%;
+  height: 100%;
+  background-size: 33em;
+  float: right;
+  background-image: url("/images/menu-black.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 95.3% -14.6em;
+}
+
 /* line 159, ../../styles/sass/screen.sass */
+.hotspot {
+  display: block;
+  position: fixed;
+  height: 2.5em;
+  z-index: 999;
+}
+/* line 166, ../../styles/sass/screen.sass */
+.hotspot.who-are-they {
+  top: 13em;
+  right: 15em;
+  width: 20em;
+}
+/* line 170, ../../styles/sass/screen.sass */
+.hotspot.what-do-they-do {
+  top: 16em;
+  right: 15em;
+  width: 20em;
+}
+/* line 174, ../../styles/sass/screen.sass */
+.hotspot.who-do-they-serve {
+  top: 18.8em;
+  right: 15em;
+  width: 20em;
+}
+/* line 178, ../../styles/sass/screen.sass */
+.hotspot.how-to-contact-them {
+  top: 21.7em;
+  right: 15em;
+  width: 20em;
+}
+
+/* line 187, ../../styles/sass/screen.sass */
+.accordion .accordion-item {
+  cursor: pointer;
+}
+/* line 189, ../../styles/sass/screen.sass */
+.accordion .accordion-item-content {
+  display: none;
+}
+
+/* line 194, ../../styles/sass/screen.sass */
+.logo-menu .logo {
+  margin-bottom: 0.4375em;
+}
+/* line 196, ../../styles/sass/screen.sass */
+.logo-menu .bullet-list {
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0.4375em;
+}
+
+/* line 201, ../../styles/sass/screen.sass */
+.logo {
+  display: block;
+  width: 10em;
+  height: 2.9375em;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* line 211, ../../styles/sass/screen.sass */
+.logo-cpb {
+  background-image: url("/images/CPB.png");
+  -webkit-background-size: 75%;
+  -moz-background-size: 75%;
+  -o-background-size: 75%;
+  background-size: 75%;
+}
+
+/* line 214, ../../styles/sass/screen.sass */
+.logo-mvmnt {
+  background-image: url("/images/mvmnt.svg");
+  -webkit-background-size: 50%;
+  -moz-background-size: 50%;
+  -o-background-size: 50%;
+  background-size: 50%;
+}
+
+/* line 217, ../../styles/sass/screen.sass */
+.logo-wme {
+  background-image: url("/images/wme.svg");
+  -webkit-background-size: 90%;
+  -moz-background-size: 90%;
+  -o-background-size: 90%;
+  background-size: 90%;
+}
+
+/* line 226, ../../styles/sass/screen.sass */
 .section-home {
   height: 49.75em;
-  position: relative;
 }
-/* line 163, ../../styles/sass/screen.sass */
+/* line 228, ../../styles/sass/screen.sass */
 .section-home .content-wrapper {
   padding-top: 2.5em;
 }
-/* line 165, ../../styles/sass/screen.sass */
+/* line 230, ../../styles/sass/screen.sass */
 .section-home .gun {
   font-size: 0.85em;
 }
-/* line 167, ../../styles/sass/screen.sass */
+/* line 232, ../../styles/sass/screen.sass */
 .section-home .jules {
   position: absolute;
   bottom: 0;
   height: 35em;
 }
+/* line 236, ../../styles/sass/screen.sass */
+.section-home .nav {
+  top: 22%;
+}
+/* line 239, ../../styles/sass/screen.sass */
+.section-home .nav:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 65%;
+  height: 20px;
+  border-top: 0.4em solid black;
+}
 
-/* line 174, ../../styles/sass/screen.sass */
+/* line 249, ../../styles/sass/screen.sass */
+.section-portfolio .content-wrapper {
+  padding-top: 5.625em;
+  position: relative;
+}
+/* line 254, ../../styles/sass/screen.sass */
+.section-portfolio .portfolio-viewport {
+  z-index: 998;
+  position: absolute;
+  width: 36.6em;
+  height: 24em;
+  top: 20.5em;
+  left: 15.8em;
+  overflow: scroll;
+}
+/* line 262, ../../styles/sass/screen.sass */
+.section-portfolio .portfolio-viewport .portfolio-screen {
+  width: 100%;
+}
+/* line 264, ../../styles/sass/screen.sass */
+.section-portfolio .laptop {
+  z-index: 999;
+  position: absolute;
+  top: 18.7em;
+  left: 9em;
+  width: 50em;
+}
+
+/* line 273, ../../styles/sass/screen.sass */
 .section-contact .content-wrapper .bullet-list {
   width: 55%;
+}
+
+/* line 282, ../../styles/sass/screen.sass */
+.bullet-list .selected, .bullet-list li:hover {
+  color: #ce0000;
+  background-image: url("/images/icons/bullet-red.png");
+  cursor: pointer;
 }
