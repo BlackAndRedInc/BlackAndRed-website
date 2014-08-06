@@ -31,12 +31,17 @@ $icons-spacing: 20px
 	font-weight: normal
 	font-style: normal
 
-@import url("http://fonts.googleapis.com/css?family=Oswald")
+@import url("http://fonts.googleapis.com/css?family=Oswald:400,300")
 
 
 ////////////////////////
 //	BASE
 ////////////////////////
+
+// Colors
+$red: #ce0000
+$black: black
+$colorHighlight: white
 
 // Resets
 *
@@ -44,10 +49,11 @@ $icons-spacing: 20px
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
 
-// Colors
-$red: #ce0000
-$black: black
-$colorHighlight: white
+a
+	&:link, &:visited
+		pointer: cursor
+		color: $red
+		text-decoration: none
 
 // Type
 h1, h2, h3, h4, .heading-1, .heading-2, .heading-3, .heading-4
@@ -156,6 +162,14 @@ body
 	background-attachment: fixed
 	background-position: 95.3% -14.6em
 
+.nav-mask
+	height: 65%
+	width: 30%
+	position: absolute
+	bottom: 0
+	right: 15em
+	background-color: $black
+
 .hotspot
 	display: block
 	position: fixed
@@ -197,6 +211,10 @@ body
 		padding-left: 0
 		padding-top: 0
 		padding-bottom: 0.4375em
+
+.display-logo
+	width: 9.375em
+
 
 .logo
 	display: block
@@ -246,27 +264,56 @@ body
 			height: 20px
 			border-top: .4em solid $black // horizontal line
 .section-portfolio
+	min-height: 58em
 	.content-wrapper
 		padding-top: 5.625em
 		position: relative
-	.nav
-		// background-image: url('/images/menu-red-no-menu.svg') !important
-	.portfolio-viewport
-		z-index: 998
+	.portfolio-slider
 		position: absolute
-		width: 36.6em
-		height: 24em
-		top: 20.5em
-		left: 15.8em
-		overflow: scroll
-		.portfolio-screen
-			width: 100%
-	.laptop
-		z-index: 999
-		position: absolute
-		top: 18.7em
+		top: 17.9em
 		left: 9em
-		width: 50em
+		z-index: 999
+		width: 55em
+		.laptop-viewport
+			position: absolute
+			width: 41.6em
+			height: 26em
+			top: 2em
+			left: 7em
+			overflow: scroll
+			@include border-radius(10px) // border radius
+			.portfolio-screen
+				width: 100%
+		.laptop
+			position: relative
+			top: 0
+			left: 0
+		.portfolio-description-wrapper
+			margin-top: -1em
+			padding-top: 2.5625em
+			width: 92%
+			height: 10em
+			display: block
+			background-color: $black
+			> *
+				float: left
+			.label
+				text-transform: uppercase
+				color: $red
+			.display-logo
+				margin-left: 0.9375em
+				color: $red
+		.portfolio-detail
+			margin-left: 1.875em
+			width: 65%
+			> *
+				margin-bottom: 0.5em
+			.portfolio-project-description
+				color: white
+				font-weight: 300
+
+
+
 
 .section-contact
 	.content-wrapper
