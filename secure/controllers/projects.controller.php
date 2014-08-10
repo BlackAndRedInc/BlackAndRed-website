@@ -1,23 +1,15 @@
 <?php
 
-	$app->get('/projects', function () use($app) {
-		$projects = ORM::for_table('projects')
-		->find_many(true);
+	require_once 'projects.model.php';
 
+	$app->get('/projects', function () use($app) {
 		$app->response()->header('Content-Type', 'application/json');
-		echo json_encode($projects);
-		
+		echo json_encode(BlackAndRed_Model_Projects::get());
 	});
 
 	$app->get('/projects/:id', function ($id) use($app) {
-		$projects = ORM::for_table('projects')
-		->find_one($id);
-		
-		$response = $projects ? $projects->as_array() : array();
-
 		$app->response()->header('Content-Type', 'application/json');
-		echo json_encode($response);
-		
+		echo json_encode(BlackAndRed_Model_Projects::get($id));
 	});
 
 ?>

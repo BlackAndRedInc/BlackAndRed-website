@@ -1,3 +1,8 @@
+<?php
+require_once 'projects.model.php';
+require_once 'clients.model.php';
+?>
+
 <!doctype html>
 	<head>
 		<meta charset="utf-8">
@@ -10,6 +15,17 @@
 		</head>
 	</head>
 	<body>
+		
+		<script>
+
+			// BOOTSTRAP DATA
+			var App = {
+				'clients': <?= json_encode(BlackAndRed_Model_Clients::get()); ?>,
+				'projects': <?= json_encode(BlackAndRed_Model_Projects::get()); ?>,
+			};
+
+		</script>
+
 		<div class="main">
 			<a href="#who-are-they" class="hotspot who-are-they"></a>
 			<a href="#what-do-they-do" class="hotspot what-do-they-do"></a>
