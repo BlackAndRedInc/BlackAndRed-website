@@ -85,7 +85,7 @@ require_once 'clients.model.php';
 						<div id="laptop-screen"></div>
 						<div class="portfolio-description-wrapper">
 							<p class="label">Agency:</p>
-							<img src="images/mvmnt-light.svg" class="display-logo" id="display-logo">
+							<div class="display-logo" id="display-logo"></div>
 							<div class="portfolio-detail" id="portfolio-detail"></div>
 						</div>
 					</div>

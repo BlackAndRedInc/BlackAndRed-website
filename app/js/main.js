@@ -113,7 +113,10 @@ $(function(){
 			var project = Data.projects.findWhere({ id: String(projectId) });
 			var client = Data.clients.findWhere({ id: String(project['client-id']) });
 
-			dom.$displayLogo.attr('src', 'images/'+ client['short-name'] +'-light.svg');
+			dom.$displayLogo.removeClass();
+			dom.$displayLogo.addClass('display-logo');
+			dom.$displayLogo.addClass('logo-large-' + client['short-name']);
+			
 
 			dom.$portfolioDetail.html(Creatable.create([
 				['p.section-content', [

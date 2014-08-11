@@ -70,7 +70,16 @@ h4, .heading-4
 // General
 body
 	font-family: "Oswald", Helvetica, Serif
-	font-size: 1.3vw
+
+@media screen and (max-width: 1024px)
+	body
+		font-size: 13.5px
+@media screen and  (max-width: 1200px)
+	body
+		font-size: 16px
+@media screen and (min-width: 1201px)
+	body
+		font-size: 1.3vw
 
 .main
 	position: relative
@@ -152,7 +161,7 @@ body
 
 .nav
 	position: absolute
-	right: 0
+	left: 36em
 	width: 53%
 	height: 100%
 	background-size: 33em
@@ -160,7 +169,7 @@ body
 	background-image: url('/images/menu-black.svg')
 	background-repeat: no-repeat
 	background-attachment: fixed
-	background-position: 95.3% -14.6em
+	background-position: 42em -14.6em
 
 .nav-mask
 	height: 65%
@@ -214,6 +223,8 @@ body
 
 .display-logo
 	width: 9.375em
+	height: 100%
+	background-repeat: no-repeat
 
 
 .logo
@@ -235,6 +246,17 @@ body
 .logo-wme
 	background-image: url('/images/wme.svg')
 	@include background-size(90%)
+
+.logo-large-cpb
+	background-image: url('/images/logos/cpb.jpg')
+	@include background-size(100%)
+.logo-large-mvmnt
+	background-image: url('/images/logos/mvmnt.svg')
+	@include background-size(100%)
+.logo-large-wme
+	background-image: url('/images/logos/wme.jpg')
+	@include background-size(100%)
+
 
 	
 /////////////////////////////
@@ -260,7 +282,7 @@ body
 			position: absolute
 			left: 0
 			top: 0
-			width: 65%
+			width: 26.5em
 			height: 20px
 			border-top: .4em solid $black // horizontal line
 .section-portfolio
@@ -305,6 +327,7 @@ body
 			.display-logo
 				margin-left: 0.9375em
 				color: $red
+				display: block
 		.portfolio-detail
 			margin-left: 1.875em
 			width: 65%
