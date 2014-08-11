@@ -16,10 +16,10 @@ require_once 'clients.model.php';
 	</head>
 	<body>
 		
-		<script>
+		<script type="text/javascript">
 
 			// BOOTSTRAP DATA
-			var App = {
+			var Data = {
 				'clients': <?= json_encode(BlackAndRed_Model_Clients::get()); ?>,
 				'projects': <?= json_encode(BlackAndRed_Model_Projects::get()); ?>,
 			};
@@ -79,53 +79,14 @@ require_once 'clients.model.php';
 					<h2><span class="highlight">Who</span> do they serve?</h2>
 					<h3>You’re sending the wolf?</h3>
 					<div class="section-content">We work on the best with the best. Click through some of our work <br> below to get a sense of who we are and what we do.</div>
-					<ul class="logo-menu accordion">
-						<li>
-							<div class="logo logo-mvmnt accordion-item"></div>
-							<ul class="bullet-list accordion-item-content">
-								<li ><a>VFW: Main Event</a></li>
-								<li ><a>HRC: #LOVECONQUERSHATE</a></li>
-								<li ><a>Old Chicago: Beat The Leader</a></li>
-								<li ><a>WME: Ticket to Ride</a></li>
-								<li ><a>Whole Foods: Hennepin</a></li>
-								<li ><a>NFL: Pick'em Rams</a></li>
-								<li ><a>NFL: Pick'em Bears</a></li>
-								<li ><a>NFL: Pick'em Lions</a></li>
-							</ul>
-						</li>
-
-						<li>
-							<div class="logo logo-cpb accordion-item"></div>
-							<ul class="bullet-list accordion-item-content">
-								<li ><a>FOTL: Start Happy HQ</a></li>
-								<li ><a>FOTL: Naked Cowboy</a></li>
-								<li ><a>FOTL: Dadisms</a></li>
-								<li ><a>FOTL: Gif Registry</a></li>
-								<li ><a>MetLife: FB Quote Request</a></li>
-								<li ><a>Kraft: Jello Recipes</a></li>
-								<li ><a>Applebee's: Maintence</a></li>
-								<li ><a>Aspen Dental: Maintence</a></li>
-							</ul>
-						</li>
-
-						<li>
-							<div class="logo logo-wme accordion-item"></div>
-							<ul class="bullet-list accordion-item-content">
-								<li ><a>Hometown Hills</a></li>
-							</ul>
-						</li>
-					</ul>
+					<div id="portfolio-menu"></div>
 					<div class="portfolio-slider">
 						<img src="/images/laptop.svg" class="laptop">
-						<div class="laptop-viewport"><img src="/images/portfolio/vfw.png" class="portfolio-screen"></div>
+						<div id="laptop-screen"></div>
 						<div class="portfolio-description-wrapper">
 							<p class="label">Agency:</p>
-							<img src="images/mvmnt-light.svg" class="display-logo">
-							<div class="portfolio-detail">
-								<p class="section-content"><span class="label">Project: </span>VFW Mane Event</p>
-								<p class="portfolio-project-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse error voluptatem sed, molestiae modi reiciendis illo dolorum quas in unde ipsa autem harum laborum fugiat vel? Quo porro minus</p>
-								<a href="http://vfwmaneevent.org" target="_blank" class="project-link">View Project ></a>
-							</div>
+							<img src="images/mvmnt-light.svg" class="display-logo" id="display-logo">
+							<div class="portfolio-detail" id="portfolio-detail"></div>
 						</div>
 					</div>
 				</div>
@@ -148,7 +109,7 @@ require_once 'clients.model.php';
 
 
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-		<script>
+		<script type="text/javascript">
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -158,9 +119,12 @@ require_once 'clients.model.php';
 			ga('send', 'pageview');
 		</script>
 
-		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.min.js"></script>
-		<script src="js/main.js"></script>
+		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+		<script type="text/javascript" src="js/lib/underscore-prototype/underscore-proto.js"></script>
+		<script type="text/javascript" src="js/lib/creatable/creatable.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

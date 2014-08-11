@@ -444,7 +444,7 @@ body {
 
 /* line 266, ../../styles/sass/screen.sass */
 .section-portfolio {
-  min-height: 58em;
+  min-height: 60em;
 }
 /* line 268, ../../styles/sass/screen.sass */
 .section-portfolio .content-wrapper {
@@ -452,6 +452,10 @@ body {
   position: relative;
 }
 /* line 271, ../../styles/sass/screen.sass */
+.section-portfolio .bullet-list li {
+  text-transform: none;
+}
+/* line 273, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider {
   position: absolute;
   top: 17.9em;
@@ -459,74 +463,70 @@ body {
   z-index: 999;
   width: 55em;
 }
-/* line 277, ../../styles/sass/screen.sass */
+/* line 279, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .laptop-viewport {
   position: absolute;
-  width: 41.6em;
-  height: 26em;
-  top: 2em;
-  left: 7em;
+  width: 40.5em;
+  height: 25.5em;
+  top: 2.2em;
+  left: 7.3em;
   overflow: scroll;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
-}
-/* line 285, ../../styles/sass/screen.sass */
-.section-portfolio .portfolio-slider .laptop-viewport .portfolio-screen {
-  width: 100%;
+  background-color: black;
 }
 /* line 287, ../../styles/sass/screen.sass */
+.section-portfolio .portfolio-slider .laptop-viewport .screens {
+  width: 100%;
+}
+/* line 289, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .laptop {
   position: relative;
   top: 0;
   left: 0;
 }
-/* line 291, ../../styles/sass/screen.sass */
+/* line 293, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-description-wrapper {
   margin-top: -1em;
   padding-top: 2.5625em;
   width: 92%;
-  height: 10em;
+  height: 12em;
   display: block;
   background-color: black;
 }
-/* line 298, ../../styles/sass/screen.sass */
+/* line 300, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-description-wrapper > * {
   float: left;
 }
-/* line 300, ../../styles/sass/screen.sass */
+/* line 302, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-description-wrapper .label {
   text-transform: uppercase;
   color: #ce0000;
 }
-/* line 303, ../../styles/sass/screen.sass */
+/* line 305, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-description-wrapper .display-logo {
   margin-left: 0.9375em;
   color: #ce0000;
 }
-/* line 306, ../../styles/sass/screen.sass */
+/* line 308, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-detail {
   margin-left: 1.875em;
   width: 65%;
 }
-/* line 309, ../../styles/sass/screen.sass */
+/* line 311, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-detail > * {
   margin-bottom: 0.5em;
 }
-/* line 311, ../../styles/sass/screen.sass */
+/* line 313, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-detail .portfolio-project-description {
   color: white;
   font-weight: 300;
 }
 
-/* line 320, ../../styles/sass/screen.sass */
+/* line 322, ../../styles/sass/screen.sass */
 .section-contact .content-wrapper .bullet-list {
   width: 55%;
 }
 
-/* line 329, ../../styles/sass/screen.sass */
+/* line 331, ../../styles/sass/screen.sass */
 .bullet-list .selected, .bullet-list li:hover {
   color: #ce0000;
   background-image: url("/images/icons/bullet-red.png");

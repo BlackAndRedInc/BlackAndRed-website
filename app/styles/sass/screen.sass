@@ -264,10 +264,12 @@ body
 			height: 20px
 			border-top: .4em solid $black // horizontal line
 .section-portfolio
-	min-height: 58em
+	min-height: 60em
 	.content-wrapper
 		padding-top: 5.625em
 		position: relative
+	.bullet-list li
+		text-transform: none
 	.portfolio-slider
 		position: absolute
 		top: 17.9em
@@ -276,13 +278,13 @@ body
 		width: 55em
 		.laptop-viewport
 			position: absolute
-			width: 41.6em
-			height: 26em
-			top: 2em
-			left: 7em
+			width: 40.5em
+			height: 25.5em
+			top: 2.2em
+			left: 7.3em
 			overflow: scroll
-			@include border-radius(10px) // border radius
-			.portfolio-screen
+			background-color: black
+			.screens
 				width: 100%
 		.laptop
 			position: relative
@@ -292,7 +294,7 @@ body
 			margin-top: -1em
 			padding-top: 2.5625em
 			width: 92%
-			height: 10em
+			height: 12em
 			display: block
 			background-color: $black
 			> *
