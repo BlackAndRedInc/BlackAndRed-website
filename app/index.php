@@ -24,7 +24,7 @@ ORM::configure('password', DATABASE_PASS);
 ));
 
 $app = new \Slim\Slim(array(
-	'templates.path' => '../secure/Views',
+	'templates.path' => '../secure/views',
 	'cookies.secret_key' => 'IkMHwZssJVe7XgdznBby'
 ));
 
