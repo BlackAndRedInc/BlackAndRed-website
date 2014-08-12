@@ -98,7 +98,7 @@ require_once 'clients.model.php';
 					<h3>You’re sending the wolf?</h3>
 					<ul class="bullet-list">
 						<li>p : 303.736.9924</li>
-						<li>E : info@blackandredconsulting.com</li>
+						<li>E : info@blackandred.io</li>
 						<li>A : 1245 Pearl Street, Suite 200 <br> Boulder, Colorado 80302</li>
 					</ul>
 					<!-- <h3>Meet the leaders of Black & Red :</h3> -->
