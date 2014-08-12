@@ -97,7 +97,7 @@ require_once 'clients.model.php';
 					<h2><span class="highlight">How</span> to contact them?</h2>
 					<h3>You’re sending the wolf?</h3>
 					<ul class="bullet-list">
-						<li>p : 303.736.9924</li>
+						<li>p : 1-844-SEND-WOLF (844.736.3965)</li>
 						<li>E : info@blackandred.io</li>
 						<li>A : 1245 Pearl Street, Suite 200 <br> Boulder, Colorado 80302</li>
 					</ul>
