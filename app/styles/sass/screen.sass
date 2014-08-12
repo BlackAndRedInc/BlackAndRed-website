@@ -291,8 +291,14 @@ body
 	.content-wrapper
 		padding-top: 5.625em
 		position: relative
-	.bullet-list li
-		text-transform: none
+	.bullet-list 
+		li
+			text-transform: none
+		li:hover
+			color: $red
+			background-image: url('/images/icons/bullet-red.png')
+			cursor: pointer
+
 	.portfolio-slider
 		position: absolute
 		top: 17.9em
@@ -336,7 +342,6 @@ body
 				margin-bottom: 0.5em
 			.portfolio-project-description
 				color: white
-				font-weight: 300
 
 
 
@@ -352,7 +357,7 @@ body
 //	STATES
 ////////////////////////
 .bullet-list
-	.selected, li:hover
+	.selected
 		color: $red
 		background-image: url('/images/icons/bullet-red.png')
 		cursor: pointer

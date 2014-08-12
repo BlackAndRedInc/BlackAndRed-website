@@ -497,11 +497,17 @@ body {
   padding-top: 5.625em;
   position: relative;
 }
-/* line 294, ../../styles/sass/screen.sass */
+/* line 295, ../../styles/sass/screen.sass */
 .section-portfolio .bullet-list li {
   text-transform: none;
 }
-/* line 296, ../../styles/sass/screen.sass */
+/* line 297, ../../styles/sass/screen.sass */
+.section-portfolio .bullet-list li:hover {
+  color: #ce0000;
+  background-image: url("/images/icons/bullet-red.png");
+  cursor: pointer;
+}
+/* line 302, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider {
   position: absolute;
   top: 17.9em;
@@ -509,7 +515,7 @@ body {
   z-index: 999;
   width: 55em;
 }
-/* line 302, ../../styles/sass/screen.sass */
+/* line 308, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .laptop-viewport {
   position: absolute;
   width: 40.5em;
@@ -519,17 +525,17 @@ body {
   overflow: scroll;
   background-color: black;
 }
-/* line 310, ../../styles/sass/screen.sass */
+/* line 316, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .laptop-viewport .screens {
   width: 100%;
 }
-/* line 312, ../../styles/sass/screen.sass */
+/* line 318, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .laptop {
   position: relative;
   top: 0;
   left: 0;
 }
-/* line 316, ../../styles/sass/screen.sass */
+/* line 322, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-description-wrapper {
   margin-top: -1em;
   padding-top: 2.5625em;
@@ -538,43 +544,42 @@ body {
   display: block;
   background-color: black;
 }
-/* line 323, ../../styles/sass/screen.sass */
+/* line 329, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-description-wrapper > * {
   float: left;
 }
-/* line 325, ../../styles/sass/screen.sass */
+/* line 331, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-description-wrapper .label {
   text-transform: uppercase;
   color: #ce0000;
 }
-/* line 328, ../../styles/sass/screen.sass */
+/* line 334, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-description-wrapper .display-logo {
   margin-left: 0.9375em;
   color: #ce0000;
   display: block;
 }
-/* line 332, ../../styles/sass/screen.sass */
+/* line 338, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-detail {
   margin-left: 1.875em;
   width: 65%;
 }
-/* line 335, ../../styles/sass/screen.sass */
+/* line 341, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-detail > * {
   margin-bottom: 0.5em;
 }
-/* line 337, ../../styles/sass/screen.sass */
+/* line 343, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-detail .portfolio-project-description {
   color: white;
-  font-weight: 300;
 }
 
-/* line 346, ../../styles/sass/screen.sass */
+/* line 351, ../../styles/sass/screen.sass */
 .section-contact .content-wrapper .bullet-list {
   width: 55%;
 }
 
-/* line 355, ../../styles/sass/screen.sass */
-.bullet-list .selected, .bullet-list li:hover {
+/* line 360, ../../styles/sass/screen.sass */
+.bullet-list .selected {
   color: #ce0000;
   background-image: url("/images/icons/bullet-red.png");
   cursor: pointer;

@@ -124,7 +124,7 @@ $(function(){
 					['span.project-title', (parseInt(project['use-short-name']) ? project['end-client-short-name'].toUpperCase() : project['end-client-name'])  + ': ' + project.name]
 				]],
 				['p.portfolio-project-description', project.description],
-				['a.project-link', { target: '_blank' }, 'View Project >'],
+				project.url ? ['a.project-link', { href: project.url, target: '_blank' }, 'View Project >'] : ''
 			]));
 		};
 
