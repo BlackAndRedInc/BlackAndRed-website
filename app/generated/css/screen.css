@@ -568,7 +568,7 @@ body {
   cursor: pointer;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 990px) {
   /* line 361, ../../styles/sass/screen.sass */
   .nav {
     display: none;
@@ -596,15 +596,20 @@ body {
   body {
     font-size: 13.5px;
   }
+
+  /* line 376, ../../styles/sass/screen.sass */
+  .l-page-section {
+    overflow-x: hidden;
+  }
 }
 @media screen and (max-width: 1200px) {
-  /* line 377, ../../styles/sass/screen.sass */
+  /* line 379, ../../styles/sass/screen.sass */
   body {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 1401px) {
-  /* line 380, ../../styles/sass/screen.sass */
+  /* line 382, ../../styles/sass/screen.sass */
   body {
     font-size: 0.99vw;
   }
