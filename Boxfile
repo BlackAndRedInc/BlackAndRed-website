@@ -6,6 +6,7 @@ web1:
   - mysqli
   - mbstring
   - mysql
+  - pdo_mysql
 db1:
   name: blackAndRed
   type: mysql
