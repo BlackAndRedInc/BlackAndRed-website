@@ -71,17 +71,6 @@ h4, .heading-4
 body
 	font-family: "Oswald", Helvetica, Serif
 
-@media screen and (max-width: 1024px)
-@media screen and (max-width: 1024px)
-	body
-		font-size: 13.5px
-@media screen and  (max-width: 1200px)
-	body
-		font-size: 16px
-@media screen and (min-width: 1401px)
-	body
-		font-size: .99vw
-
 .main
 	position: relative
 	overflow: hidden
@@ -288,6 +277,7 @@ body
 			border-top: .4em solid $black // horizontal line
 .section-portfolio
 	min-height: 60em
+	overflow-x: hidden
 	.content-wrapper
 		padding-top: 5.625em
 		position: relative
@@ -361,3 +351,31 @@ body
 		color: $red
 		background-image: url('/images/icons/bullet-red.png')
 		cursor: pointer
+
+
+////////////////////////
+//	ADAPTIVE
+////////////////////////
+
+@media screen and (max-width: 950px)
+	.nav
+		display: none
+	.section-portfolio 
+		.portfolio-slider
+			width: 47em
+			.laptop-viewport
+				top: 1.9em
+				left: 6.3em
+				width: 34.42em
+				height: 21.6em
+	.display-logo
+		width: 8.375em
+@media screen and (max-width: 1024px)
+	body
+		font-size: 13.5px
+@media screen and  (max-width: 1200px)
+	body
+		font-size: 16px
+@media screen and (min-width: 1401px)
+	body
+		font-size: .99vw
