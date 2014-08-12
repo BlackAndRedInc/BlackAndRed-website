@@ -6,3 +6,6 @@ web1:
   - mysqli
   - mbstring
   - mysql
+db1:
+  name: blackAndRed
+  type: mysql
