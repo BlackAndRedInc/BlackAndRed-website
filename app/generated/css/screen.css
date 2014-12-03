@@ -1,5 +1,5 @@
 @import url("http://fonts.googleapis.com/css?family=Oswald:400,300");
-/* line 17, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,92 +21,93 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+/* line 116, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
-/* line 82, icons/*.png */
+/* line 88, icons/*.png */
 .icons-sprite, .icons-arrow-left, .icons-arrow-right, .icons-bullet-red, .icons-bullet, .icons-gun, .icons-phone {
-  background: url('../sprites/icons-s3a6faa0097.png') no-repeat;
+  background-image: url('../sprites/icons-s6ee3278c33.png');
+  background-repeat: no-repeat;
 }
 
-/* line 60, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-arrow-left {
-  background-position: 0 -167px;
-  height: 24px;
-  width: 16px;
-}
-
-/* line 60, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-arrow-right {
-  background-position: 0 -211px;
-  height: 24px;
-  width: 16px;
-}
-
-/* line 60, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.icons-bullet-red {
   background-position: 0 0;
+  height: 24px;
+  width: 16px;
+}
+
+/* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-arrow-right {
+  background-position: 0 -44px;
+  height: 24px;
+  width: 16px;
+}
+
+/* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-bullet-red {
+  background-position: 0 -88px;
   height: 9px;
   width: 29px;
 }
 
-/* line 60, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-bullet {
-  background-position: 0 -255px;
+  background-position: 0 -117px;
   height: 9px;
   width: 29px;
 }
 
-/* line 60, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-gun {
-  background-position: 0 -29px;
+  background-position: 0 -146px;
   height: 53px;
   width: 77px;
 }
 
-/* line 60, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .icons-phone {
-  background-position: 0 -102px;
+  background-position: 0 -219px;
   height: 45px;
   width: 46px;
 }
@@ -118,7 +119,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-style: normal;
   font-weight: 400;
 }
-
 @font-face {
   font-family: "BR-Icons";
   src: url("/../../assets/fonts/icons/BlackRedInc.eot?7ew5cb");
@@ -126,11 +126,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-weight: normal;
   font-style: normal;
 }
-
 /* line 47, ../../styles/sass/screen.sass */
 * {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -369,13 +368,12 @@ body {
   display: block;
   width: 10em;
   height: 2.9375em;
-  -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background-color: white;
   background-repeat: no-repeat;
@@ -385,80 +383,98 @@ body {
 /* line 230, ../../styles/sass/screen.sass */
 .logo-cpb {
   background-image: url("/images/cpb.png");
-  -webkit-background-size: 75%;
   -moz-background-size: 75%;
   -o-background-size: 75%;
+  -webkit-background-size: 75%;
   background-size: 75%;
 }
 
 /* line 233, ../../styles/sass/screen.sass */
 .logo-mvmnt {
   background-image: url("/images/mvmnt.svg");
-  -webkit-background-size: 50%;
   -moz-background-size: 50%;
   -o-background-size: 50%;
+  -webkit-background-size: 50%;
   background-size: 50%;
 }
 
 /* line 236, ../../styles/sass/screen.sass */
 .logo-wme {
   background-image: url("/images/wme.svg");
-  -webkit-background-size: 90%;
   -moz-background-size: 90%;
   -o-background-size: 90%;
+  -webkit-background-size: 90%;
   background-size: 90%;
 }
 
-/* line 240, ../../styles/sass/screen.sass */
-.logo-large-cpb {
-  background-image: url("/images/logos/cpb.jpg");
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
+/* line 239, ../../styles/sass/screen.sass */
+.logo-evb {
+  background-image: url("/images/logos/evb.svg");
+  -moz-background-size: 63%;
+  -o-background-size: 63%;
+  -webkit-background-size: 63%;
+  background-size: 63%;
 }
 
 /* line 243, ../../styles/sass/screen.sass */
-.logo-large-mvmnt {
-  background-image: url("/images/logos/mvmnt.svg");
-  -webkit-background-size: 100%;
+.logo-large-cpb {
+  background-image: url("/images/logos/cpb.jpg");
   -moz-background-size: 100%;
   -o-background-size: 100%;
+  -webkit-background-size: 100%;
   background-size: 100%;
 }
 
 /* line 246, ../../styles/sass/screen.sass */
-.logo-large-wme {
-  background-image: url("/images/logos/wme.jpg");
-  -webkit-background-size: 100%;
+.logo-large-mvmnt {
+  background-image: url("/images/logos/mvmnt.svg");
   -moz-background-size: 100%;
   -o-background-size: 100%;
+  -webkit-background-size: 100%;
   background-size: 100%;
 }
 
-/* line 256, ../../styles/sass/screen.sass */
+/* line 249, ../../styles/sass/screen.sass */
+.logo-large-wme {
+  background-image: url("/images/logos/wme.jpg");
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+
+/* line 252, ../../styles/sass/screen.sass */
+.logo-large-evb {
+  background-image: url("/images/logos/evb-large.svg");
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+
+/* line 262, ../../styles/sass/screen.sass */
 .section-home {
   height: 49.75em;
 }
-/* line 258, ../../styles/sass/screen.sass */
+/* line 264, ../../styles/sass/screen.sass */
 .section-home .content-wrapper {
   padding-top: 2.5em;
 }
-/* line 260, ../../styles/sass/screen.sass */
+/* line 266, ../../styles/sass/screen.sass */
 .section-home .gun {
   font-size: 0.85em;
 }
-/* line 262, ../../styles/sass/screen.sass */
+/* line 268, ../../styles/sass/screen.sass */
 .section-home .jules {
   position: absolute;
   bottom: 0;
   height: 35em;
 }
-/* line 266, ../../styles/sass/screen.sass */
+/* line 272, ../../styles/sass/screen.sass */
 .section-home .nav {
   top: 22%;
 }
-/* line 269, ../../styles/sass/screen.sass */
+/* line 275, ../../styles/sass/screen.sass */
 .section-home .nav:after {
   content: "";
   display: block;
@@ -470,27 +486,27 @@ body {
   border-top: 0.4em solid black;
 }
 
-/* line 278, ../../styles/sass/screen.sass */
+/* line 284, ../../styles/sass/screen.sass */
 .section-portfolio {
   min-height: 60em;
   overflow-x: hidden;
 }
-/* line 281, ../../styles/sass/screen.sass */
+/* line 287, ../../styles/sass/screen.sass */
 .section-portfolio .content-wrapper {
   padding-top: 5.625em;
   position: relative;
 }
-/* line 285, ../../styles/sass/screen.sass */
+/* line 291, ../../styles/sass/screen.sass */
 .section-portfolio .bullet-list li {
   text-transform: none;
 }
-/* line 287, ../../styles/sass/screen.sass */
+/* line 293, ../../styles/sass/screen.sass */
 .section-portfolio .bullet-list li:hover {
   color: #ce0000;
   background-image: url("/images/icons/bullet-red.png");
   cursor: pointer;
 }
-/* line 292, ../../styles/sass/screen.sass */
+/* line 298, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider {
   position: absolute;
   top: 17.9em;
@@ -498,7 +514,7 @@ body {
   z-index: 999;
   width: 55em;
 }
-/* line 298, ../../styles/sass/screen.sass */
+/* line 304, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .laptop-viewport {
   position: absolute;
   width: 40.5em;
@@ -508,17 +524,17 @@ body {
   overflow: scroll;
   background-color: black;
 }
-/* line 306, ../../styles/sass/screen.sass */
+/* line 312, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .laptop-viewport .screens {
   width: 100%;
 }
-/* line 308, ../../styles/sass/screen.sass */
+/* line 314, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .laptop {
   position: relative;
   top: 0;
   left: 0;
 }
-/* line 312, ../../styles/sass/screen.sass */
+/* line 318, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-description-wrapper {
   margin-top: -1em;
   padding-top: 2.5625em;
@@ -527,41 +543,41 @@ body {
   display: block;
   background-color: black;
 }
-/* line 319, ../../styles/sass/screen.sass */
+/* line 325, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-description-wrapper > * {
   float: left;
 }
-/* line 321, ../../styles/sass/screen.sass */
+/* line 327, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-description-wrapper .label {
   text-transform: uppercase;
   color: #ce0000;
 }
-/* line 324, ../../styles/sass/screen.sass */
+/* line 330, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-description-wrapper .display-logo {
   margin-left: 0.9375em;
   color: #ce0000;
   display: block;
 }
-/* line 328, ../../styles/sass/screen.sass */
+/* line 334, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-detail {
   margin-left: 1.875em;
   width: 65%;
 }
-/* line 331, ../../styles/sass/screen.sass */
+/* line 337, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-detail > * {
   margin-bottom: 0.5em;
 }
-/* line 333, ../../styles/sass/screen.sass */
+/* line 339, ../../styles/sass/screen.sass */
 .section-portfolio .portfolio-slider .portfolio-detail .portfolio-project-description {
   color: white;
 }
 
-/* line 341, ../../styles/sass/screen.sass */
+/* line 347, ../../styles/sass/screen.sass */
 .section-contact .content-wrapper .bullet-list {
   width: 55%;
 }
 
-/* line 350, ../../styles/sass/screen.sass */
+/* line 356, ../../styles/sass/screen.sass */
 .bullet-list .selected {
   color: #ce0000;
   background-image: url("/images/icons/bullet-red.png");
@@ -569,16 +585,16 @@ body {
 }
 
 @media screen and (max-width: 990px) {
-  /* line 361, ../../styles/sass/screen.sass */
+  /* line 367, ../../styles/sass/screen.sass */
   .nav {
     display: none;
   }
 
-  /* line 364, ../../styles/sass/screen.sass */
+  /* line 370, ../../styles/sass/screen.sass */
   .section-portfolio .portfolio-slider {
     width: 47em;
   }
-  /* line 366, ../../styles/sass/screen.sass */
+  /* line 372, ../../styles/sass/screen.sass */
   .section-portfolio .portfolio-slider .laptop-viewport {
     top: 1.9em;
     left: 6.3em;
@@ -586,30 +602,30 @@ body {
     height: 21.6em;
   }
 
-  /* line 371, ../../styles/sass/screen.sass */
+  /* line 377, ../../styles/sass/screen.sass */
   .display-logo {
     width: 8.375em;
   }
 }
 @media screen and (max-width: 1024px) {
-  /* line 374, ../../styles/sass/screen.sass */
+  /* line 380, ../../styles/sass/screen.sass */
   body {
     font-size: 13.5px;
   }
 
-  /* line 376, ../../styles/sass/screen.sass */
+  /* line 382, ../../styles/sass/screen.sass */
   .l-page-section {
     overflow-x: hidden;
   }
 }
 @media screen and (max-width: 1200px) {
-  /* line 379, ../../styles/sass/screen.sass */
+  /* line 385, ../../styles/sass/screen.sass */
   body {
     font-size: 16px;
   }
 }
 @media screen and (min-width: 1401px) {
-  /* line 382, ../../styles/sass/screen.sass */
+  /* line 388, ../../styles/sass/screen.sass */
   body {
     font-size: 0.99vw;
   }
