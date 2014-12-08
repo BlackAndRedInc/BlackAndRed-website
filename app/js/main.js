@@ -78,8 +78,10 @@ $(function(){
 				autoHeight: true,
 				// Sync menu with slides
 				afterAction: function(){
-					var currentSlide = this.owl.currentItem + 1;
-					var $newlySelectedBullet = $('.bullet-list a[data-id=' + currentSlide + ']').parent();
+					var currentSlide = parseInt(this.owl.currentItem, 10);
+					var $slideLink = $('.bullet-list a[data-slide-id=' + currentSlide + ']');
+					var projectId = $slideLink.data('id');
+					var $newlySelectedBullet = $slideLink.parent();
 					var $currentlySelectedBullet = $('.bullet-list .selected');
 					var $currentMenu = $newlySelectedBullet.parent();
 					var $currentMenuSectionHeader = $currentMenu.siblings();
@@ -90,12 +92,11 @@ $(function(){
 					// If switching menu sections roll up the prev and roll down the current
 					if($currentMenu.not(':visible')){
 						$('.accordion .accordion-item').next().not($currentMenu).slideUp(300);
-						console.log();
 						$currentMenu.slideDown(300);
 					}
 
 					// Change portfolio details
-					changePortfolioDetail(currentSlide);
+					changePortfolioDetail(projectId);
 				}
 			});
 
@@ -104,10 +105,10 @@ $(function(){
 
 			// init navigation of slider event via menu
 			$('.logo-menu .project-item').click(function(e){
-				var projectId = e.target.getAttribute('data-id');
+				var slideId = parseInt(e.target.getAttribute('data-slide-id'), 10);
 
 				// Go to Slide
-				owl.goTo(projectId-1);
+				owl.goTo(slideId);
 			});
 		};
 
@@ -119,7 +120,6 @@ $(function(){
 			dom.$displayLogo.addClass('display-logo');
 			dom.$displayLogo.addClass('logo-large-' + client['short-name']);
 			
-
 			dom.$portfolioDetail.html(Creatable.create([
 				['p.section-content', [
 					['span.label', 'Project: '],
