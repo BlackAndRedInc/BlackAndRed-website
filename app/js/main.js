@@ -33,6 +33,8 @@ $(function(){
 		};
 
 		var portfolio = function(){
+			var laptopScreenContents = [];
+
 			// Populate Project Menu
 			dom.$portfolioMenu.html(Creatable.create(['ul.logo-menu.accordion', Data.clients.map(function(client){
 				return ['li', [
@@ -41,9 +43,13 @@ $(function(){
 						Data.projects
 							.where({ 'client-id': client.id })
 							.map(function(project){
+								// fill in the laptop screen contents array
+								// in order that the menu appears
+								laptopScreenContents.push(['img.screens', { src: '/images/portfolio/' + project.id + '.jpg', 'data-id': project.id }]);
+
 								return [
 									'li a.project-item',
-									{ 'data-id': project.id },
+									{ 'data-id': project.id, 'data-slide-id': laptopScreenContents.length - 1  },
 									(parseInt(project['use-short-name']) ? project['end-client-short-name'].toUpperCase() : project['end-client-name'] )  + ': ' + project.name
 								];
 							})
@@ -52,11 +58,7 @@ $(function(){
 			})]));
 
 			// Create laptop screen slider
-			dom.$laptopScreen.html(Creatable.create(['.laptop-viewport.owl-carousel', Data.projects.map(function(project){
-
-				return ['img.screens', { src: '/images/portfolio/' + project.id + '.jpg', 'data-id': project.id }];
-
-			})]));
+			dom.$laptopScreen.html(Creatable.create(['.laptop-viewport.owl-carousel', laptopScreenContents]));
 
 			// Give menu accordion functionality
 			initAccordion();
