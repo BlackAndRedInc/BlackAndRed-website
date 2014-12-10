@@ -33,6 +33,8 @@ $(function(){
 		};
 
 		var portfolio = function(){
+			var laptopScreenContents = [];
+
 			// Populate Project Menu
 			dom.$portfolioMenu.html(Creatable.create(['ul.logo-menu.accordion', Data.clients.map(function(client){
 				return ['li', [
@@ -41,9 +43,13 @@ $(function(){
 						Data.projects
 							.where({ 'client-id': client.id })
 							.map(function(project){
+								// fill in the laptop screen contents array
+								// in order that the menu appears
+								laptopScreenContents.push(['img.screens', { src: '/images/portfolio/' + project.id + '.jpg', 'data-id': project.id }]);
+
 								return [
 									'li a.project-item',
-									{ 'data-id': project.id },
+									{ 'data-id': project.id, 'data-slide-id': laptopScreenContents.length - 1  },
 									(parseInt(project['use-short-name']) ? project['end-client-short-name'].toUpperCase() : project['end-client-name'] )  + ': ' + project.name
 								];
 							})
@@ -52,11 +58,7 @@ $(function(){
 			})]));
 
 			// Create laptop screen slider
-			dom.$laptopScreen.html(Creatable.create(['.laptop-viewport.owl-carousel', Data.projects.map(function(project){
-
-				return ['img.screens', { src: '/images/portfolio/' + project.id + '.jpg', 'data-id': project.id }];
-
-			})]));
+			dom.$laptopScreen.html(Creatable.create(['.laptop-viewport.owl-carousel', laptopScreenContents]));
 
 			// Give menu accordion functionality
 			initAccordion();
@@ -76,8 +78,10 @@ $(function(){
 				autoHeight: true,
 				// Sync menu with slides
 				afterAction: function(){
-					var currentSlide = this.owl.currentItem + 1;
-					var $newlySelectedBullet = $('.bullet-list a[data-id=' + currentSlide + ']').parent();
+					var currentSlide = parseInt(this.owl.currentItem, 10);
+					var $slideLink = $('.bullet-list a[data-slide-id=' + currentSlide + ']');
+					var projectId = $slideLink.data('id');
+					var $newlySelectedBullet = $slideLink.parent();
 					var $currentlySelectedBullet = $('.bullet-list .selected');
 					var $currentMenu = $newlySelectedBullet.parent();
 					var $currentMenuSectionHeader = $currentMenu.siblings();
@@ -88,12 +92,11 @@ $(function(){
 					// If switching menu sections roll up the prev and roll down the current
 					if($currentMenu.not(':visible')){
 						$('.accordion .accordion-item').next().not($currentMenu).slideUp(300);
-						console.log();
 						$currentMenu.slideDown(300);
 					}
 
 					// Change portfolio details
-					changePortfolioDetail(currentSlide);
+					changePortfolioDetail(projectId);
 				}
 			});
 
@@ -102,10 +105,10 @@ $(function(){
 
 			// init navigation of slider event via menu
 			$('.logo-menu .project-item').click(function(e){
-				var projectId = e.target.getAttribute('data-id');
+				var slideId = parseInt(e.target.getAttribute('data-slide-id'), 10);
 
 				// Go to Slide
-				owl.goTo(projectId-1);
+				owl.goTo(slideId);
 			});
 		};
 
@@ -117,7 +120,6 @@ $(function(){
 			dom.$displayLogo.addClass('display-logo');
 			dom.$displayLogo.addClass('logo-large-' + client['short-name']);
 			
-
 			dom.$portfolioDetail.html(Creatable.create([
 				['p.section-content', [
 					['span.label', 'Project: '],
